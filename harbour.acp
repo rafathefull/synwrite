@@ -1,0 +1,5 @@
+Keyword static
+Keyword local
+Keyword private
+Keyword public
+Function abs(int)|absolute value of an integer. rtl.lib
