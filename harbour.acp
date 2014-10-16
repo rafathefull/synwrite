@@ -44,23 +44,31 @@ Function ATREPL( <cSearch>, <cString>, <cReplace>, [<nCount>], [<lOneOnly>] ) --
 Function ATSKIPSTRINGS( <cSearch>, <cString> ) --> nPos | Locates the position of a substring within a character string. 
 Function ATTOKEN( <cString>, [<cDelimiter>], [<nCount>] ) --> nPos | Returns the position of the n-th token in a string. 
 
-Function BIN2I()        | Convert a 16-bit signed integer to a numeric value
-Function BIN2L()        | Convert a 32-bit signed integer to a numeric value
-Function BIN2W()        | Convert a 16-bit unsigned integer to a numeric value
-Function BLOBDIRECTEXP()| Export the contents of a BLOB pointer to a file
-Function BLOBDIRECTGET()| Retrieve data from a BLOB file without referencing a field
-Function BLOBDIRECTIMP()| Import a file into a BLOB file and return pointer to the data
-Function BLOBDIRECTPUT()| Put data in a BLOB file without referencing a specific field
-Function BLOBEXPORT()   | Copy the contents of a memo field number to a BLOB file
-Function BLOBGET()      | Get the contents of a BLOB, identified by memo field number
-Function BLOBIMPORT()   | Read the contents of a BLOB file into a memo field
-Function BLOBROOTGET()  | Retrieve the data from the root area of a BLOB file
-Function BLOBROOTLOCK() | Obtain a lock on the root area of a BLOB file
-Function BLOBROOTPUT()  | Store data in the root area of a BLOB file
-Function BLOBROOTUNLOC()| Release the lock on a BLOB file's root area
-Function BOF()          | Determine when beginning of file is encountered
+Function BEFORATNUM( <cSearch>, <cString>, [<nCount>], [<nSkipChars>] ) --> cResult | Extracts the remainder of a string before the last occurrance of a search string.
+Function BIN2I( <cInteger> ) --> nNumber | Converts an unsigned long binary integer (4 bytes) into a numeric value
+Function BIN2L( <cInteger> ) --> nNumber | Converts a signed long binary integer (4 bytes) into a numeric value.
+Function BIN2W( <cInteger> ) --> nNumber | Converts an unsigned short binary integer (2 bytes) into a numeric value.
+Function BITTOC( <nInteger>, <cBitPattern>, [<lSpaces>] ) --> cResult | Translates bits of an integer to a character string
+Function BLANK( <xValue>, [<lSpaces>] ) --> xEmptyValue | Returns empty values for the data types A, C, D, L, M and N.
+Function BLOBDIRECTEXPO( <nBlobID>, <cTargetFile>, [<nMode>] ) --> lSuccess| Export the contents of a BLOB pointer to a file
+Function BLOBDIRECTGET( <nBlobID>, [<nStart>], [<nCount>] ) --> xBlobData| Retrieve data from a BLOB file without referencing a field
+Function BLOBDIRECTIMP( <nOldBlobID>, <cSourceFile> ) --> nNewBlobID| Import a file into a BLOB file and return pointer to the data
+Function BLOBDIRECTPUT( <nOldblobID>, <xBlobData> ) --> nNewblobID | Put data in a BLOB file without referencing a specific field
+Function BLOBEXPORT( <nFieldPos>, <cTargetFile>, [<nMode>] ) --> lSuccess | Copy the contents of a memo field number to a BLOB file
+Function BLOBGET( <nFieldPos>, [<nStart>], [<nCount>] ) --> xBlobData | Get the contents of a BLOB, identified by memo field number
+Function BLOBIMPORT( <nFieldPos>, <cSourceFile> ) --> lSuccess   | Read the contents of a BLOB file into a memo field
+Function BLOBROOTDELETE() --> lSuccess |Deleted the root area of a BLOB file
+Function BLOBROOTGET() --> xBlobData | Retrieve the data from the root area of a BLOB file
+Function BLOBROOTLOCK() --> lSuccess | Obtain a lock on the root area of a BLOB file
+Function BLOBROOTPUT() --> lSuccess | Store data in the root area of a BLOB file
+Function BLOBROOTUNLOC() | Release the lock on a BLOB file's root area
+Function BOF() --> lBeginOfFile | Determine when beginning of file is encountered
+Functiom BOM( [<dDate>] ) --> dFirstDayOfMonth | Returns the date of the first day of a month
+Function BOQ( [<dDate>] ) --> dFirstDayOfQuarter | Returns the date of the first day of a quarter
+Function BOY( [<dDate>] ) --> dFirstDayOfYear | Returns the date of the first day of a year
 Function BREAK()        | Branch out of a BEGIN SEQUENCE...END construct
-Function BROWSE()*      | Browse records within a window
+Function BROWSE( [<nTop>],[<nLeft>], [<nBottom>], [<nRight>]   ) --> lOk | Browse records within a window
+
 Function CDOW()         | Convert a date value to a character day of the week
 Function CHR()          | Convert an ASCII code to a character value
 Function CMONTH()       | Convert a date to a character month name
@@ -68,6 +76,7 @@ Function COL()          | Return the screen cursor column position
 Function COLORSELECT()  | Activate attribute in current color settings
 Function CTOD()         | Convert a date string to a date value
 Function CURDIR()       | Return the current DOS directory
+
 Function DATE()         | Return the system date as a date value
 Function DAY()          | Return the day of the month as a numeric value
 Function DBAPPEND()     | Append a new record to the database in the current work area
@@ -134,6 +143,7 @@ Function DOSERROR()     | Return the last DOS error number
 Function DOW()          | Convert a date value to a numeric day of the week
 Function DTOC()         | Convert a date value to a character string
 Function DTOS()         | Convert a date value to a string formatted as yyyymmdd
+
 Function EMPTY()        | Determine if the result of an expression is empty
 Function EOF()          | Determine when end of file is encountered
 Function ERRORBLOCK()   | Post a code block to execute when a runtime error occurs
