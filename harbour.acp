@@ -2,4 +2,322 @@ Keyword static
 Keyword local
 Keyword private
 Keyword public
-Function abs(int)|absolute value of an integer. rtl.lib
+
+Function AADD()         | Add a new element to the end of an array
+Function ABS()          | Return the absolute value of a numeric expression
+Function ACHOICE()      | Execute a pop-up menu
+Function ACLONE()       | Duplicate a nested or multidimensional array
+Function ACOPY()        | Copy elements from one array to another
+Function ADEL()         | Delete an array element
+Function ADIR()*        | Fill a series of arrays with directory information
+Function AEVAL()        | Execute a code block for each element in an array
+Function AFIELDS()*     | Fill arrays with the structure of the current database file
+Function AFILL()        | Fill an array with a specified value
+Function AINS()         | Insert a NIL element into an array
+Function ALERT()        | Display a simple modal dialog box
+Function ALIAS()        | Return a specified work area alias
+Function ALLTRIM()      | Remove leading and trailing spaces from a character string
+Function ALTD()         | Invoke the CA-Clipper debugger
+Function ARRAY()        | Create an uninitialized array of specified length
+Function ASC()          | Convert a character to its ASCII value
+Function ASCAN()        | Scan an array for a value or until a block returns true (.T.)
+Function ASIZE()        | Grow or shrink an array
+Function ASORT()        | Sort an array
+Function AT()           | Return the position of a substring within a character string
+Function ATAIL()        | Return the highest numbered element of an array
+Function BIN2I()        | Convert a 16-bit signed integer to a numeric value
+Function BIN2L()        | Convert a 32-bit signed integer to a numeric value
+Function BIN2W()        | Convert a 16-bit unsigned integer to a numeric value
+Function BLOBDIRECTEXP()| Export the contents of a BLOB pointer to a file
+Function BLOBDIRECTGET()| Retrieve data from a BLOB file without referencing a field
+Function BLOBDIRECTIMP()| Import a file into a BLOB file and return pointer to the data
+Function BLOBDIRECTPUT()| Put data in a BLOB file without referencing a specific field
+Function BLOBEXPORT()   | Copy the contents of a memo field number to a BLOB file
+Function BLOBGET()      | Get the contents of a BLOB, identified by memo field number
+Function BLOBIMPORT()   | Read the contents of a BLOB file into a memo field
+Function BLOBROOTGET()  | Retrieve the data from the root area of a BLOB file
+Function BLOBROOTLOCK() | Obtain a lock on the root area of a BLOB file
+Function BLOBROOTPUT()  | Store data in the root area of a BLOB file
+Function BLOBROOTUNLOC()| Release the lock on a BLOB file's root area
+Function BOF()          | Determine when beginning of file is encountered
+Function BREAK()        | Branch out of a BEGIN SEQUENCE...END construct
+Function BROWSE()*      | Browse records within a window
+Function CDOW()         | Convert a date value to a character day of the week
+Function CHR()          | Convert an ASCII code to a character value
+Function CMONTH()       | Convert a date to a character month name
+Function COL()          | Return the screen cursor column position
+Function COLORSELECT()  | Activate attribute in current color settings
+Function CTOD()         | Convert a date string to a date value
+Function CURDIR()       | Return the current DOS directory
+Function DATE()         | Return the system date as a date value
+Function DAY()          | Return the day of the month as a numeric value
+Function DBAPPEND()     | Append a new record to the database in the current work area
+Function DBCLEARFIL()   | Clear a filter condition
+Function DBCLEARIND()   | Close all indexes for the current work area
+Function DBCLEARREL()   | Clear active relations
+Function DBCLOSEALL()   | Close all occupied work areas
+Function DBCLOSEAREA()  | Close a work area
+Function DBCOMMIT()     | Flush pending updates
+Function DBCOMMITALL()  | Flush pending updates in all work areas
+Function DBCREATE()     | Create a database file from a database structure array
+Function DBCREATEIND()  | Create an index file
+Function DBDELETE()     | Mark a record for deletion
+Function DBEDIT()       | Browse records in a table layout
+Function DBEVAL()       | Evaluate code block for each record matching scope/condition
+Function DBF()*         | Return current alias name
+Function DBFIELDINFO()  | Return and optionally change information about a field
+Function DBFILEGET()    | Insert the contents of a field into a file
+Function DBFILEPUT()    | Insert the contents of a file into a field
+Function DBFILTER()     | Return the current filter expression as a character string
+Function DBGOBOTTOM()   | Move to the last logical record
+Function DBGOTO()       | Position record pointer to a specific identity
+Function DBGOTOP()      | Move to the first logical record
+Function DBINFO()       | Return and optionally change database file information
+Function DBORDERINFO()  | Return and optionally change order and index file information
+Function DBRECALL()     | Reinstate a record marked for deletion
+Function DBRECORDINFO() | Return and optionally change information about a record
+Function DBREINDEX()    | Recreate all active indexes for the current work area
+Function DBRELATION()   | Return the linking expression of a specified relation
+Function DBRLOCK()      | Lock the record at the current or specified identity
+Function DBRLOCKLIST()  | Return an array of the current lock list
+Function DBRSELECT()    | Return the target work area number of a relation
+Function DBRUNLOCK()    | Release all or specified record locks
+Function DBSEEK()       | Move to the record having the specified key value
+Function DBSELECTAR()   | Change the current work area
+Function DBSETDRIVER()  | Return the database driver and optionally set a new driver
+Function DBSETFILTER()  | Set a filter condition
+Function DBSETINDEX()   | Empty orders from an order bag into the order list
+Function DBSETORDER()   | Set the controlling order
+Function DBSETRELAT()   | Relate two work areas
+Function DBSKIP()       | Move relative to the current record
+Function DBSTRUCT()     | Create an array containing the structure of a database file
+Function DBUNLOCK()     | Release all locks for the current work area
+Function DBUNLOCKALL()  | Release all locks for all work areas
+Function DBUSEAREA()    | Use a database file in a work area
+Function DELETED()      | Return the deleted status of the current record
+Function DESCEND()      | Create a descending index key value
+Function DEVOUT()       | Write a value to the current device
+Function DEVOUTPICT()   | Write a value to the current device using a picture clause
+Function DEVPOS()       | Move the cursor or printhead to a new position
+Function DIRCHANGE()    | Change the current DOS directory
+Function DIRECTORY()    | Create an array of directory and file information
+Function DIRMAKE()      | Create a directory
+Function DIRREMOVE()    | Remove a directory
+Function DISKCHANGE()   | Change the current DOS disk drive
+Function DISKNAME()     | Return the current DOS drive
+Function DISKSPACE()    | Return the space available on a specified disk
+Function DISPBEGIN()    | Begin buffering screen output
+Function DISPBOX()      | Display a box on the screen
+Function DISPCOUNT()    | Return the number of pending DISPEND() requests
+Function DISPEND()      | Display buffered screen updates
+Function DISPOUT()      | Write a value to the display
+Function DOSERROR()     | Return the last DOS error number
+Function DOW()          | Convert a date value to a numeric day of the week
+Function DTOC()         | Convert a date value to a character string
+Function DTOS()         | Convert a date value to a string formatted as yyyymmdd
+Function EMPTY()        | Determine if the result of an expression is empty
+Function EOF()          | Determine when end of file is encountered
+Function ERRORBLOCK()   | Post a code block to execute when a runtime error occurs
+Function ERRORLEVEL()   | Set the CA-Clipper return code
+Function EVAL()         | Evaluate a code block
+Function EXP()          | Calculate e**x
+Function FCLOSE()       | Close an open binary file and write DOS buffers to disk
+Function FCOUNT()       | Return the number of fields in the current .dbf file
+Function FCREATE()      | Create and/or truncate a binary file to zero-length
+Function FERASE()       | Delete a file from disk
+Function FERROR()       | Test for errors after a binary file operation
+Function FIELDBLOCK()   | Return a set-get code block for a given field
+Function FIELDGET()     | Retrieve the value of a field using the field position
+Function FIELDNAME()    | Return a field name from the current database (.dbf) file
+Function FIELDPOS()     | Return the position of a field in a work area
+Function FIELDPUT()     | Set the value of a field variable using the field position
+Function FIELDWBLOCK()  | Return a set-get code block for a field in a given work area
+Function FILE()         | Determine if files exist in the default directory or path
+Function FKLABEL()*     | Return function key name
+Function FKMAX()*       | Return number of function keys as a constant
+Function FLOCK()        | Lock an open and shared database file
+Function FOPEN()        | Open a binary file
+Function FOUND()        | Determine if the previous search operation succeeded
+Function FREAD()        | Read characters from a binary file into a buffer variable
+Function FREADSTR()     | Read characters from a binary file
+Function FRENAME()      | Change the name of a file
+Function FSEEK()        | Set a binary file pointer to a new position
+Function FWRITE()       | Write to an open binary file
+Function GBMPDISP()     | Display a bitmap (.BMP) file on screen
+Function GBMPLOAD()     | Load a bitmap (.bmp) or icon (.ico) file into memory
+Function GELLIPSE()     | Draw an ellipse or circle
+Function GETACTIVE()    | Return the currently active Get object
+Function GETAPPLYKEY()  | Apply a key to a Get object from within a  reader
+Function GETDOSETKEY()  | Process SET KEY during GET editing
+Function GETENV()       | Retrieve the contents of a DOS environment variable
+Function GETPOSTVALID() | Postvalidate the current Get object
+Function GETPREVALID()  | Prevalidate a Get object
+Function GETREADER()    | Execute standard READ behavior for a Get object
+Function GFNTERASE()    | Erase a font from memory
+Function GFNTLOAD()     | Load a font file into memory
+Function GFNTSET()      | Set an already loaded font as active
+Function GFRAME()       | Draw a frame with a 3-D look
+Function GGETPIXEL()    | Get color information for a pixel
+Function GLINE()        | Draw a line in graphic mode
+Function GMODE()        | Switch video mode
+Function GPOLYGON()     | Draw a polygon on screen
+Function GPUTPIXEL()    | Draw a pixel on the screen
+Function GRECT()        | Draw a rectangle in graphic mode
+Function GSETCLIP()     | Define the allowed display area
+Function GSETEXCL()     | Define a screen region to be excluded from display
+Function GSETPAL()      | Change components of a color
+Function GWRITEAT()     | Draw graphic text without background
+Function HARDCR()       | Replace all soft carriage returns with hard carriage returns
+Function HEADER()       | Return the current database file header length
+Function I2BIN()        | Convert a CA-Clipper numeric to a 16-bit binary integer
+Function IF()           | Return the result of an expression based on a condition
+Function IIF()          | Return the result of an expression based on a condition
+Function INDEXEXT()     | Return index extension defined by the current database driver
+Function INDEXKEY()     | Return the key expression of a specified index
+Function INDEXORD()     | Return the order position of the controlling index
+Function INKEY()        | Extract a character from the keyboard buffer or a mouse event
+Function INT()          | Convert a numeric value to an integer
+Function ISALPHA()      | Determine if the leftmost character in a string is alphabetic
+Function ISCOLOR()      | Determine if the current computer has color capability
+Function ISDIGIT()      | Determine if the leftmost character in a string is a digit
+Function ISLOWER()      | Determine if the leftmost character is a lowercase letter
+Function ISPRINTER()    | Determine whether LPT1 is ready
+Function ISUPPER()      | Determine if the leftmost character in a string is uppercase
+Function L2BIN()        | Convert a CA-Clipper numeric value to a 32-bit binary integer
+Function LASTKEY()      | Return INKEY() value of last key extracted from the keyboard
+Function LASTREC()      | Determine the number of records in the current .dbf file
+Function LEFT()         | Extract substring beginning with first character in a string
+Function LEN()          | Return the length of a string or number of array elements
+Function LOG()          | Calculate the natural logarithm of a numeric value
+Function LOWER()        | Convert uppercase characters to lowercase
+Function LTRIM()        | Remove leading spaces from a character string
+Function LUPDATE()      | Return the last modification date of a database (.dbf) file
+Function MAX()          | Return the larger of two numeric or date values
+Function MAXCOL()       | Determine the maximum visible screen column
+Function MAXROW()       | Determine the maximum visible screen row
+Function MCOL()         | Determine the mouse cursor's screen column position
+Function MDBLCLK()      | Determine the double-click speed threshold of the mouse
+Function MEMOEDIT()     | Display or edit character strings and memo fields
+Function MEMOEDIT()     | continued...
+Function MEMOLINE()     | Extract a line of text from a character string or memo field
+Function MEMOREAD()     | Return the contents of a disk file as a character string
+Function MEMORY()       | Determine the amount of available free pool memory
+Function MEMOSETSUPER() | Set an RDD inheritance chain for the DBFMEMO database driver
+Function MEMOTRAN()     | Replace carriage return/linefeeds in character strings
+Function MEMOWRIT()     | Write a character string or memo field to a disk file
+Function MEMVARBLOCK()  | Return a set-get code block for a given memory variable
+Function MENUMODAL()    | Activate a top bar menu
+Function MHIDE()        | Hide the mouse pointer
+Function MIN()          | Return the smaller of two numeric or date values
+Function MLCOUNT()      | Count the number of lines in a character string or memo field
+Function MLCTOPOS()     | Return position of a string based on line and column position
+Function MLEFTDOWN()    | Determine the press status of the left mouse button
+Function MLPOS()        | Determine the position of a line in a string or memo field
+Function MOD()*         | Return the dBASE III PLUS modulus of two numbers
+Function MONTH()        | Convert a date value to the number of the month
+Function MPOSTOLC()     | Return line/ column position of a string based on a position
+Function MPRESENT()     | Determine if a mouse is present
+Function MRESTSTATE()   | Re-establish the previous state of a mouse
+Function MRIGHTDOWN()   | Determine the status of the right mouse button
+Function MROW()         | Determine a mouse cursor's screen row position
+Function MSAVESTATE()   | Save the current state of a mouse
+Function MSETBOUNDS()   | Set screen boundaries for the mouse cursor
+Function MSETCLIP()     | Define an inclusion region
+Function MSETCURSOR()   | Determine a mouse's visibility
+Function MSETPOS()      | Set a new position for the mouse cursor
+Function MSHOW()        | Display the mouse pointer
+Function MSTATE()       | Return the current mouse state
+Function NETERR()       | Determine if a network command has failed
+Function NETNAME()      | Return the current workstation identification
+Function NEXTKEY()      | Read the pending key in the keyboard buffer
+Function NOSNOW()       | Toggle snow suppression
+Function ORDBAGEXT()    | Return the default order bag RDD extension
+Function ORDBAGNAME()   | Return the order bag name of a specific order
+Function ORDCOND()      | Specify conditions for ordering
+Function ORDCONDSET()   | Set the condition and scope for an order
+Function ORDCREATE()    | Create an order in an order bag
+Function ORDDESCEND()   | Return and optionally change the descending flag of an order
+Function ORDDESTROY()   | Remove a specified order from an order bag
+Function ORDFOR()       | Return the FOR expression of an order
+Function ORDISUNIQUE()  | Return the status of the unique flag for a given order
+Function ORDKEY()       | Return the key expression of an order
+Function ORDKEYADD()    | Add a key to a custom built order
+Function ORDKEYCOUNT()  | Return the number of keys in an order
+Function ORDKEYDEL()    | Delete a key from a custom built order
+Function ORDKEYGOTO()   | Move to a record specified by its logical record number
+Function ORDKEYNO()     | Get the logical record number of the current record
+Function ORDKEYVAL()    | Get key value of the current record from controlling order
+Function ORDLISTADD()   | Add orders to the order list
+Function ORDLISTCLEAR() | Clear the current order list
+Function ORDLISTREBUI() | Rebuild all orders in the order list of the current work area
+Function ORDNAME()      | Return the name of an order in the order list
+Function ORDNUMBER()    | Return the position of an order in the current order list
+Function ORDSCOPE()     | Set or clear the boundaries for scoping key values
+Function ORDSETFOCUS()  | Set focus to an order in an order list
+Function ORDSETRELAT()  | Relate a specified work
+Function ORDSKIPUNIQUE()| Move record pointer to the next or previous unique key
+Function OS()           | Return the operating system name
+Function OUTERR()       | Write a list of values to the standard error device
+Function OUTSTD()       | Write a list of values to the standard output device
+Function PAD()          | Pad character, date, and numeric values with a fill character
+Function PCOL()         | Return the current column position of the printhead
+Function PCOUNT()       | Determine the position of the last actual parameter passed
+Function PROCLINE()     | Return source line number of current or previous activation
+Function PROCNAME()     | Return name of the current or previous procedure or function
+Function PROW()         | Return the current row position of the printhead
+Function QOUT()         | Display a list of expressions to the console
+Function RAT()          | Return the position of the last occurrence of a substring
+Function RDDLIST()      | Return an array of the RDDs
+Function RDDNAME()      | Return name of RDD active in current or specified work area
+Function RDDSETDEFAULT()| Set or return the default RDD for the application
+Function READEXIT()     | Toggle Up arrow and Down arrow as READ exit keys
+Function READFORMAT()   | Return and optionally set code block to implement format file
+Function READINSERT()   | Toggle the current insert mode for READ and MEMOEDIT()
+Function READKEY()*     | Determine what key terminated a READ
+Function READKILL()     | Return and optionally set whether current READ can be exited
+Function READMODAL()    | Activate a full-screen editing mode for a GetList
+Function READUPDATED()  | Determine whether any GET variables changed during a READ
+Function READVAR()      | Return the current GET/MENU variable name
+Function RECCOUNT()*    | Determine the number of records in the current database file
+Function RECNO()        | Return the identity at the position of the record pointer
+Function RECSIZE()      | Determine the record length of a database (.dbf) file
+Function REPLICATE()    | Return a string repeated a specified number of times
+Function RESTSCREEN()   | Display a saved screen region to a specified location
+Function RIGHT()        | Return a substring beginning with the rightmost character
+Function RLOCK()        | Lock the current record in the active work area
+Function ROUND()        | Return a numeric value rounded to a specified number of digits
+Function ROW()          | Return the screen row position of the cursor
+Function RTRIM()        | Remove trailing spaces from a character string
+Function SAVESCREEN()   | Save a screen region for later display
+Function SCROLL()       | Scroll a screen region up or down, right or left
+Function SECONDS()      | Return the number of seconds elapsed since midnight
+Function SELECT()       | Determine the work area number of a specified alias
+Function SET()          | Inspect or change a system setting
+Function SETBLINK()     | Toggle * interpretation between blinking/background intensity
+Function SETCANCEL()    | Toggle Alt+C and Ctrl+Break as program termination keys
+Function SETCOLOR()     | Return the current colors and optionally set new colors
+Function SETCURSOR()    | Set the cursor shape
+Function SETKEY()       | Assign an action block to a key
+Function SETMODE()      | Change display mode to a specified number of rows and columns
+Function SETPOS()       | Move the cursor to a new position
+Function SETPRC()       | Set PROW() and PCOL() values
+Function SOUNDEX()      | Convert a character string to "soundex" form
+Function SPACE()        | Return a string of spaces
+Function SQRT()         | Return the square root of a positive number
+Function STR()          | Convert a numeric expression to a character string
+Function STRTRAN()      | Search and replace characters within a string or memo field
+Function STUFF()        | Delete and insert characters in a string
+Function SUBSTR()       | Extract a substring from a character string
+Function TIME()         | Return the system time
+Function TONE()         | Sound a speaker tone for a specified frequency and duration
+Function TRANSFORM()    | Convert any value into a formatted character string
+Function TRIM()         | Remove trailing spaces from a character string
+Function TYPE()         | Determine the type of an expression
+Function UPDATED()      | Determine whether a GET changed during a READ
+Function UPPER()        | Convert lowercase characters to uppercase
+Function USED()         | Determine whether a database file is in USE
+Function VAL()          | Convert a character number to numeric type
+Function VALTYPE()      | Determine the data type returned by an expression
+Function VERSION()      | Returns CA-Clipper version
+Function WORD()*        | Convert CALL command numeric parameters from double to int
+Function YEAR()         | Convert a date value to the year as a numeric value
