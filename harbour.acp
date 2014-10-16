@@ -2,30 +2,48 @@ Keyword static
 Keyword local
 Keyword private
 Keyword public
-
                             
 Function AADD(<aTarget>, <expValue>) --> Value | Add a new element to the end of an array
 Function ABS(<nExp>) --> nPositive | Return the absolute value of a numeric expression
-Function ACHOICE(<nTop>, <nLeft>, <nBottom>, <nRight>,<acMenuItems>, [<alSelectableItems> OR <lSelectableItems>], [<cUserFunction>], [<nInitialItem>], [<nWindowRow>]) --> nPosition | Execute a pop-up menu
-Function ACLONE()       | Duplicate a nested or multidimensional array
-Function ACOPY()        | Copy elements from one array to another
-Function ADEL()         | Delete an array element
-Function ADIR()*        | Fill a series of arrays with directory information
-Function AEVAL()        | Execute a code block for each element in an array
-Function AFIELDS()*     | Fill arrays with the structure of the current database file
-Function AFILL()        | Fill an array with a specified value
-Function AINS()         | Insert a NIL element into an array
-Function ALERT()        | Display a simple modal dialog box
-Function ALIAS()        | Return a specified work area alias
-Function ALLTRIM()      | Remove leading and trailing spaces from a character string
-Function ALTD()         | Invoke the CA-Clipper debugger
-Function ARRAY()        | Create an uninitialized array of specified length
-Function ASC()          | Convert a character to its ASCII value
-Function ASCAN()        | Scan an array for a value or until a block returns true (.T.)
-Function ASIZE()        | Grow or shrink an array
-Function ASORT()        | Sort an array
-Function AT()           | Return the position of a substring within a character string
-Function ATAIL()        | Return the highest numbered element of an array
+Function ACHOICE( <nTop>, <nLeft>, <nBottom>, <nRight>,<acMenuItems>, [<alSelectableItems> OR <lSelectableItems>], [<cUserFunction>], [<nInitialItem>], [<nWindowRow>]) --> nPosition | Execute a pop-up menu
+Function ACLONE(<aSource>) --> aDuplicate | Duplicate a nested or multidimensional array
+Function ACOPY( <aSource> ,<aTarget>, [<nSourceStart>],[<nCount>], [<nTargetStart>] ) --> aTarget| Copy elements from one array to another
+Function ACOS( <nRadians> ) --> nArcCosine | Calculates the arc cosine.
+Function ADDASCII( <cString>, <nValue>, [<nPos>] ) --> cNewString | Adds a numeric value to the ASCII code of a specified character in a string.
+Function ADDMONTH( <dDate>, <nMonths> ) --> dNewDate |Adds or subtracts a number of months to/from a Date value.
+Function ADEL( <aArray>, <nElement>, [<lShrink>] ) --> aArray | Delete an array element
+Function ADIR( [<cFileMask>], [<aName>],[<aSize>],[<aDate>],[<aTime>],[<aAttr>]) --> nDirEnries | Fill a series of arrays with directory information
+Function AEVAL( <aArray>, <bBlock>, [<nStart>], [<nCount>] ) --> aArray | Execute a code block for each element in an array
+Function AFIELDS( [<aFieldName>],[<aFieldType>],[<aFieldLen>],[<aFieldDec>] ) --> nCount| Fill arrays with the structure of the current database file
+Function AFILL( <aArray>, <expression>, [<nStart>], [<nCount>] ) --> aArray | Fill an array with a specified value
+Function AFTERATNUM( <cSearch>, <cString>,[<nCount>], [<nSkipChars>] ) --> cResult | Extracts the remainder of a string after the last occurrence of a search string.
+Function AINS( <aArray>, <nElement>, [<xValue>], [<lGrow>] ) --> aArray | Inserts an element into an array
+Function ALENALLOC( <aArray> ) --> nElements | Determines for how much array elements memory is pre-allocated.
+Function ALERT( <xMessage>, [<aOptions>], [<cColor>], [<nDelay>] ) --> nChoice | Display a simple modal dialog box
+Function ALIAS( [<nWorkArea>] ) --> cAlias | Return a specified  work area alias
+Function ALLTRIM( <cString> ) --> cTrimmed | Remove leading and trailing spaces from a character string
+Function ALTD( [<nAction>] ) | Invoke the CA-Clipper debugger
+Function AMPM( <cTime> ) --> cFormattedTime | Converts a time string into am/pm format.
+Function ANSITOHTML( <cAnsiString> ) --> cHtmlString | Inserts HTML character entities into an ANSI text string
+Function ARRAY( <nDim1> [, <nDimN,...>] ) --> aArray| Create an uninitialized array of specified length
+Function ASC( <cCharacter> ) --> nAsciiCode | Convert a character to its ASCII value
+Function ASCAN( <aArray>,<xbSearch>,[<nStart>],[<nCount>], [<lExact>], [<lASCII>]  ) --> nElement | Scan an array for a value or until a block returns true (.T.)
+Function ASCIISUM( <cString> ) --> nASCIISum | Sums the ASCII codes of all characters in a string. 
+Function ASCPOS( <cString>, [<nPos>] ) --> nASCIICode | Determines the ASCII code of a specified character in a string.
+Function ASIN( <nRadians> ) --> nArcSine | Calculates the arc sine. 
+Function ASIZE( <aArray>, <nCount> ) --> aArray   Grow or shrink an array
+Function ASIZEALLOC( <aArray>, <nCount>  ) --> aArray | Pre-allocates memory for an array.
+Function ASORT( <aArray>, [<nStart>], [<nCount>], [<bSort>] ) --> aArray | Sort an array
+Function AT( <cSearch>, <cString>, [<nStart>], [<nEnd>] ) --> nPos | Return the position of a substring within a character string
+Function ATADJUST( <cSearch>, <cString>, <nEndPos>, [<nCount>], [<nSkipChars>], [<xInsChar>] ) --> cJustified | Justifies a character sequence within a string
+Function ATAIL( <aArray> ) --> xValue | Return the highest numbered element of an array
+Function ATAN( <nRadians> ) --> nArcTangent | Calculates the arc tangent.
+Function ATN2( <nSine> , <nCosine> ) --> nRadians| Calculates the radians of an angle from sine and cosine
+Function ATNUM( <cSearch>, <cString>, [<nCount>], [<nSkipChars>] ) --> nPos | Searches multiple occurrences of a substring within a string.
+Function ATREPL( <cSearch>, <cString>, <cReplace>, [<nCount>], [<lOneOnly>] ) --> cResult  | Searches and replaces a substring within a string. 
+Function ATSKIPSTRINGS( <cSearch>, <cString> ) --> nPos | Locates the position of a substring within a character string. 
+Function ATTOKEN( <cString>, [<cDelimiter>], [<nCount>] ) --> nPos | Returns the position of the n-th token in a string. 
+
 Function BIN2I()        | Convert a 16-bit signed integer to a numeric value
 Function BIN2L()        | Convert a 32-bit signed integer to a numeric value
 Function BIN2W()        | Convert a 16-bit unsigned integer to a numeric value
