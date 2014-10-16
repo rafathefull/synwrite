@@ -69,13 +69,84 @@ Function BOY( [<dDate>] ) --> dFirstDayOfYear | Returns the date of the first da
 Function BREAK()        | Branch out of a BEGIN SEQUENCE...END construct
 Function BROWSE( [<nTop>],[<nLeft>], [<nBottom>], [<nRight>]   ) --> lOk | Browse records within a window
 
-Function CDOW()         | Convert a date value to a character day of the week
-Function CHR()          | Convert an ASCII code to a character value
-Function CMONTH()       | Convert a date to a character month name
-Function COL()          | Return the screen cursor column position
-Function COLORSELECT()  | Activate attribute in current color settings
-Function CTOD()         | Convert a date string to a date value
-Function CURDIR()       | Return the current DOS directory
+Function CDOW <dDate> ) --> cDayName  | Convert a date value to a character day of the week
+Function CEILING( <nValue> ) --> nInteger | Rounds a decimal number to the next higher integer
+Function CELSIUS( <nFahrenheit> ) --> nCelsius |Converts degrees Fahrenheit to Celsius
+Function CENTER( <cString>, [<nLength>], [<cPadChar>], [<lBothSides>] ) --> cCenteredString | Returns a string for centered display
+Function CHARADD( <cString1> , <cString2> ) --> cResult | Creates a string from the sum of ASCII codes of two strings. 
+Function CHARAND( <cString1>, <cString2> ) --> cResult | Binary ANDs the ASCII codes of characters in two strings. 
+Function CHAREVEN( <cString> ) --> cResult | Extracts characters at even positions from a string. 
+Function CHARHIST( [<cString>] ) --> aHistogram | Creates a histogram of characters in a character string
+Function CHARLIST( <cString> ) --> cResult |Removes duplicate characters from a string. 
+Function CHARMIRR( <cString>, [<lNoSpaces>] ) --> cResult | Reverses the order of characters in a string. 
+Function CHARMIX( <cString1>, <cString2> ) --> cResult | Merges the characters of two strings.
+Function CHARNOLIST( [<cString>] ) --> cNotInString | Returns a string containing all characters not included in a string. 
+Function CHARNOT( <cString> ) --> cResult | Binary NOTs the ASCII codes of characters in two strings. 
+Function CHARODD( <cString> ) --> cResult | Extracts characters at odd positions from a string. 
+Function CHARONE( [<cDelete>], <cString> ) --> cResult | Removes duplicate adjacent characters from a string. 
+Function CHARONLY( <cRemaining>, <cString> ) --> cResult | Removes all characters but the specified ones from a string 
+Function CHAROR( <cString1>, <cString2> ) --> cResult | Binary ORs the ASCII codes of characters in two strings. 
+Function CHARPACK( <cString> ) --> cCompressed | Compresses a string. 
+Function CHARRELA( <cSearch1>, <cString1>, <cSearch2>, <cString2>  ) --> nPosition | Tests if two substrings in two strings have the same position.
+Function CHARRELREP( <cSearch1>, <cString1>, <cSearch2>, <cString2>, <cReplace>  ) --> cResult |Replaces characters if two substrings in two strings have the same position. 
+Function CHARREM( <cDelete>, <cString> ) --> cResult | Deletes specified characters from a string. 
+Function CHARREPL( <cSearch>, <cString>, <cReplace>, [<lOnePass>] ) --> cResult |Searches a list of characters and replaces them with a corresponding list. 
+Function CHARRLL( <cString>, <nShift> ) --> cResult | Rotates bits in a character string to the left. 
+Function CHARRLR( <cString>, <nShift> ) --> cResult | Rotates bits in a character string to the right. 
+Function CHARSHL( <cString>, <nShift> ) --> cResult | Shifts bits in a character string to the left. 
+Function CHARSHR( <cString>, <nShift> ) --> cResult | Shifts bits in a character string to the right. 
+Function CHARSLIST( <cString> ) --> cSortedList | Removes duplicate characters from a string and sorts the result. 
+Function CHARSORT( <cString>, [<nSeqLen>], [<nCompareLen>], [<nSkipChars>] , [<nSkipSeq>], [<nSortLen>], [<lDescending>]  ) --> cResult | Sorts character (sequences) within a string. 
+Function CHARSPREAD( <cString>, <nLineLen>, [<xInsChar>]  ) --> cResult | Formats a character string for block paragraphs. 
+Function CHARSUB( <cString1>, <cString2> ) --> cResult | Creates a string by subtracting ASCII codes of two strings.
+Function CHARSWAP( <cString> ) --> cResult | Exchanges adjacent characters in a string. 
+Function CHARUNPACK( <cCompressed> ) --> cUncompressed | Uncompresses a CharPack() compressed string.
+Function CHARWIN( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>], [<xNewChar>], [<xOldChar>]  ) |Replaces characters in a specified screen area.  
+Function CHARXOR( <cString1>, <cString2> ) --> cResult | Binary XORs the ASCII codes of characters in two strings.
+Function CHECKSUM( <cString> ) --> nCheckSum | Calculates the checksum for a character string. 
+Function CHR( <nAsciiCode> )  --> cCharacter | Convert an ASCII code to a character value
+Function CLEARBIT( <nInteger> OR <cHex>,[<nBitPos,...>]) --> nNewValue | Sets one or more bits of a numeric integer value to 0. 
+Function CLEAREOL( [<nRow>], [<nCol>], [<xColor>], [<xChar>] ) | Clears a row on the screen beginning at a specified position. 
+Function CLEARSLOW( <nDelay>, [<nTop>], [<nLeft>], [<nBottom>], [<nRight>], [<xChar>] ) | Clears a screen area incrementally with a delayed imploding effect. 
+Function CLEARWIN( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>],  [<xColor>], [<xChar>] ) | Clears all or parts of the screen.  
+Function CLEOL( [<nRow>], [<nCol>] ) | Clears characters and colors in a row on the screen. 
+Function CLWIN( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>] ) | Clears characters and colors on the screen.   
+Function CMONTH( <dDate> ) --> cMonthName | Convert a date to a character month name
+Function COL() --> nColPos | Return the screen cursor column position
+Function COLORREPL( [<xNewColor>], [<xOldColor>] ) | Replaces color attributes on the screen. 
+Function COLORSELECT( <nColorIndex> )  | Activate attribute in current color settings
+Function COLORTON( <cColor> ) --> nColorAttribute | Converts a color value to a numeric color attribute.
+Function COLORWIN( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>], [<xNewColor>], [<xOldColor>] ) | Replaces a color attribute in a screen region. 
+Function COMPLEMENT( <xValue> ) --> xComplement | Creates the complement for values of data type C, D, L, M, N 
+Function CONVTOANSICP( <cOEM_String> ) --> cANSI_String | Converts an OEM string to the ANSI character set. 
+Function CONVTOOEMCP( <cANSI_String> ) --> cOEM_String | Converts an ANSI string to the OEM character set. 
+Function COS( <nAngle> ) --> nCosine | Calculates the cosine for an angle. 
+Function COSH( <nRadians> ) --> nHyperbolicCosine | Calculates the hyperbolic cosine for an angle. 
+Function COT( <nAngle> ) --> nCotangent | Calculates the cotangent. 
+Function COUNTGETS() --> nGetCount | Returns the number of Get fields in the current Getlist array. 
+Function COUNTLEFT( <cString>, [<xChar>] ) --> nCount | Counts a specified character from the left side of a string.
+Function COUNTRIGHT( <cString>, [<xChar>] ) --> nCount | Counts a specified character from the right side of a string. 
+Function CREATEOBJECT( <cProgID> ) --> oOleAuto | Instantiates a new OLE Automation object. 
+Function CRYPT( <cString>, <cPassWord> ) --> cResult | Encrypts or decrypts a character string. 
+Function CSETATMUPA( [<lNewMode>] ) --> lOldMode |Queries or changes the multi-pass mode for At***() functions. 
+Function CSETCENT( [<lNewMode>] ) --> lOldMode | Queries or changes the SET CENTURY setting. 
+Function CSETCURS( [<lNewMode>] ) --> lOldMode | Queries or changes the SET CURSOR setting.          
+Function CSETKEY( <nKey> ) --> bCodeBlock |Retrieves the code block associated with a key.
+Function CSETREF( [<lNewMode>] ) --> lOldMode | Queries or changes the pass-by-reference mode for several string functions. 
+Function CSETSAFETY( [<lNewMode>] ) --> lOldMode | Retrieves and/or changes the safety switch used in CA-Tools file operations. 
+Function CSTR( <xValue> ) --> cString | Converts a value to a character string. 
+Function CSTRTOVAL( <cString>, <cValtype> ) --> xValue | Converts a character string to a value of specific data type. 
+Function CTOBIT( <cString> , <cBitPattern> ) --> nInteger | Converts a character string to an integer based on a bit pattern. 
+Function CTOD( <cDateString> ) --> dDate | Convert a date string to a date value
+Function CTODOW( <cDayName> ) --> nDayOfWeek | Returns the number of a week day from its name.
+Function CTOF( <cFloat> ) --> nNumber | Converts an 8 byte string to a floating point number.
+Function CTOMONTH( <cMonthName> ) --> nMonth | Returns the number of a month from its name.
+Function CTON( <cDigits>, [<nBase>], [<lNegative>]) --> nInteger | Converts a string of digits to an integer of the specified base.
+Function CTOT( <cDateTimeString> ) --> dDateTime | Converts a character string into a DateTime value 
+Function CURDIR( [<cDrive>] ) --> cDirPath | Return the current DOS directory
+Function CURDIR( [<cDrive>] ) --> cDirPath | Returns the current directory of a drive including directory separators. 
+Function CURDRIVE( [<cNewDrive>] ) --> cOldDrive | Determines or changes the current disk drive
+Function CURRENTGET() --> nCurrentGetPos | Returns the position of the current Get field in the Getlist array. 
 
 Function DATE()         | Return the system date as a date value
 Function DAY()          | Return the day of the month as a numeric value
