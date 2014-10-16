@@ -3,9 +3,10 @@ Keyword local
 Keyword private
 Keyword public
 
-Function AADD()         | Add a new element to the end of an array
-Function ABS()          | Return the absolute value of a numeric expression
-Function ACHOICE()      | Execute a pop-up menu
+                            
+Function AADD(<aTarget>, <expValue>) --> Value | Add a new element to the end of an array
+Function ABS(<nExp>) --> nPositive | Return the absolute value of a numeric expression
+Function ACHOICE(<nTop>, <nLeft>, <nBottom>, <nRight>,<acMenuItems>, [<alSelectableItems> OR <lSelectableItems>], [<cUserFunction>], [<nInitialItem>], [<nWindowRow>]) --> nPosition | Execute a pop-up menu
 Function ACLONE()       | Duplicate a nested or multidimensional array
 Function ACOPY()        | Copy elements from one array to another
 Function ADEL()         | Delete an array element
@@ -321,3 +322,140 @@ Function VALTYPE()      | Determine the data type returned by an expression
 Function VERSION()      | Returns CA-Clipper version
 Function WORD()*        | Convert CALL command numeric parameters from double to int
 Function YEAR()         | Convert a date value to the year as a numeric value
+
+Command ? ??           | Display one or more values to the console
+Command @...BOX        | Draw a box on the screen\n haha
+Command @...CLEAR      | Clear a rectangular region of the screen
+Command @...GET        | Create a new Get object and display it
+Command @...GET        | continued...
+Command @...GET CHECK  | Create a new check box Get object and display it
+Command @...GET LIST   | Create a new list box Get object and display it
+Command @...GET PUSH   | Create a new push button Get object and display it
+Command @...GET RADIO  | Create a new radio button group Get object and display it
+Command @...GET TBROWSE| Create a new TBrowse Get object and display it
+Command @...PROMPT     | Paint a menu item and define a message
+Command @...SAY        | Display data at a specified screen or printer row and column
+Command @...TO         | Draw a single- or double-line box
+Command ACCEPT*        | Place keyboard input into a memory variable
+Command APPEND BLANK   | Add a new record to the current database file
+Command APPEND FROM    | Import records from a database (.dbf) file or ASCII text file
+Command AVERAGE        | Average numeric expressions in the current work area
+Command CALL*          | Execute a C or Assembler procedure
+Command CANCEL*        | Terminate program processing
+Command CLEAR ALL*     | Close files and release public and private variables
+Command CLEAR GETS     | Release Get objects from the current GetList array
+Command CLEAR MEMORY   | Release all public and private variables
+Command CLEAR SCREEN   | Clear the screen and return the cursor home
+Command CLEAR TYPEAHEAD| Empty the keyboard buffer
+Command CLOSE          | Close a specific set of files
+Command COMMIT         | Perform a solid-disk write for all active work areas
+Command CONTINUE       | Resume a pending LOCATE
+Command COPY FILE      | Copy a file to a new file or to a device
+Command COPY STRUCTURE | Copy the current .dbf structure to a new database (.dbf) file
+Command COPY STRU EXTE | Copy field definitions to a .dbf file
+Command COPY TO        | Export records to a database (.dbf) file or ASCII text file
+Command COUNT          | Tally records to a variable
+Command CREATE         | Create an empty structure extended (.dbf) file
+Command CREATE FROM    | Create a new .dbf file from a structure extended file
+Command DELETE         | Mark records for deletion
+Command DELETE FILE    | Remove a file from disk
+Command DELETE TAG     | Delete a tag
+Command DIR*           | Display a listing of files from a specified path
+Command DISPLAY        | Display records to the console
+Command EJECT          |  Advance the printhead to top of form
+Command ERASE          | Remove a file from disk
+Command FIND*          | Search an index for a specified key value
+Command GO             | Move the pointer to the specified identity
+Command INDEX          | Create an index file
+Command INPUT*         | Enter the result of an expression into a variable
+Command JOIN           | Create a new database file by merging from two work areas
+Command KEYBOARD       | Stuff a string into the keyboard buffer
+Command LABEL FORM     | Display labels to the console
+Command LIST           | List records to the console
+Command LOCATE         | Search sequentially for a record matching a condition
+Command MENU TO        | Execute a lightbar menu for defined PROMPTs
+Command NOTE*          | Place a single-line comment in a program file
+Command PACK           | Remove deleted records from a database file
+Command QUIT           | Terminate program processing
+Command READ           | Activate full-screen editing mode using Get objects
+Command RECALL         | Restore records marked for deletion
+Command REINDEX        | Rebuild open indexes in the current work area
+Command RELEASE        | Delete public and private memory variables
+Command RENAME         | Change the name of a file
+Command REPLACE        | Assign new values to field variables
+Command REPORT FORM    | Display a report to the console
+Command RESTORE        | Retrieve memory variables from a memory (.mem) file
+Command RESTORE SCREEN*| Display a saved screen
+Command RUN            | Execute a DOS command or program
+Command SAVE           | Save variables to a memory (.mem) file
+Command SAVE SCREEN*   | Save the current screen to a buffer or variable
+Command SEEK           | Search an order for a specified key value
+Command SELECT         | Change the current work area
+Command SET ALTERNATE  | Echo console output to a text file
+Command SET BELL       | Toggle sounding of the bell during full-screen operations
+Command SET CENTURY    | Modify the date format to include or omit century digits
+Command SET COLOR*     | Define screen colors
+Command SET CONFIRM    | Toggle required exit key to terminate GETs
+Command SET CONSOLE    | Toggle console display to the screen
+Command SET CURSOR     | Toggle the screen cursor on or off
+Command SET DATE       | Set the date format for input and display
+Command SET DECIMALS   | Set the number of decimal places to be displayed
+Command SET DEFAULT    | Set the CA-Clipper default drive and directory
+Command SET DELETED    | Toggle filtering of deleted records
+Command SET DELIMITERS | Toggle or define GET delimiters
+Command SET DESCENDING | Change the descending flag of the controlling order
+Command SET DEVICE     | Direct @...SAYs to the screen or printer
+Command SET EPOCH      | Control the interpretation of dates with no century digits
+Command SET ESCAPE     | Toggle Esc as a READ exit key
+Command SET EVENTMASK  | Specify events to be returned by the INKEY() function
+Command SET EXACT*     | Toggle exact matches for character strings
+Command SET EXCLUSIVE* | Establish shared or exclusive USE of database files
+Command SET FILTER     | Hide records not meeting a condition
+Command SET FIXED      | Toggle fixing of the number of decimal digits displayed
+Command SET FORMAT*    | Activate a format when READ is executed
+Command SET FUNCTION   | Assign a character string to a function key
+Command SET INDEX      | Open one or more order bags in the current work area
+Command SET INTENSITY  | Toggle enhanced display of GETs and PROMPTs
+Command SET KEY        | Assign a procedure invocation to a key
+Command SET MARGIN     | Set the page offset for all printed output
+Command SET MEMOBLOCK  | Change the block size for memo files
+Command SET MESSAGE    | Set the @...PROMPT message line row
+Command SET OPTIMIZE   | Change the setting that optimizes using open orders
+Command SET ORDER      | Select the controlling order
+Command SET PATH       | Specify the CA-Clipper search path for opening files
+Command SET PRINTER    | Toggle echo of output to printer or set the print destination
+Command SET PROCEDURE* | Compile procedures and functions into the current object file
+Command SET RELATION   | Relate two work areas by a key value or record number
+Command SET SCOPE      | Change the boundaries for scoping keys in controlling order
+Command SET SCOPEBOTTOM| Change bottom boundary for scoping keys in controlling order
+Command SET SCOPETOP   | Change top boundary for scoping keys in controlling order
+Command SET SCOREBOARD | Toggle the message display from READ or MEMOEDIT()
+Command SET SOFTSEEK   | Toggle relative seeking
+Command SET TYPEAHEAD  | Set the size of the keyboard buffer
+Command SET UNIQUE*    | Toggle inclusion of non-unique keys into an index
+Command SET VIDEOMODE  | Change the current video mode of the current application
+Command SET WRAP*      | Toggle wrapping of the highlight in menus
+Command SKIP           | Move the record pointer to a new position
+Command SORT           | Copy to a database (.dbf) file in sorted order
+Command STORE*         | Assign a value to one or more variables
+Command SUM            | Sum numeric expressions and assign results to variables
+Command TEXT*          | Display a literal block of text
+Command TOTAL          | Summarize records by key value to a database (.dbf) file
+Command TYPE           | Display the contents of a text file
+Command UNLOCK         | Release file/record locks set by the current user
+Command UPDATE         | Update current database file from another database file
+Command USE            | Open an existing database (.dbf) and its associated files
+Command WAIT*          | Suspend program processing until a key is pressed
+Command ZAP            | Remove all records from the current database file
+
+Preprocessor #define |define macrodefinition
+Preprocessor #elif |conditional operators
+Preprocessor #else |conditional operators
+Preprocessor #endif |conditional operators
+Preprocessor #error |display an error message
+Preprocessor #if |conditional operators
+Preprocessor #ifdef |conditional operators
+Preprocessor #ifndef |conditional operators
+Preprocessor #include |insert the contents of another file
+Preprocessor #pragma |implementation specific command
+Preprocessor #undef |used to undefine macrodefinitions
