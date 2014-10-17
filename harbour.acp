@@ -148,9 +148,13 @@ Function CURDIR( [<cDrive>] ) --> cDirPath | Returns the current directory of a 
 Function CURDRIVE( [<cNewDrive>] ) --> cOldDrive | Determines or changes the current disk drive
 Function CURRENTGET() --> nCurrentGetPos | Returns the position of the current Get field in the Getlist array. 
 
-Function DATE()         | Return the system date as a date value
-Function DAY()          | Return the day of the month as a numeric value
-Function DBAPPEND()     | Append a new record to the database in the current work area
+Function DATE() --> dDate| Return the system date as a date value
+Function DATETIME() --> dDateTime | Returns the current date and time from the operating system. 
+Function DAY( <dDate> ) --> nDay | Return the day of the month as a numeric value
+Function DAYS( <nSeconds> ) --> nDays | Calculates the number of days from elapsed seconds. 
+Function DAYSINMONTH( <nMonth>, [<lLeapYear>] ) --> nDaysInMonth | Returns the number of days in a month. 
+Function DAYSTOMONTH( <nMonth>, [<lLeapYear>] ) --> nDays | Returns the number of days from first January to the beginning of a month. 
+Function DBAPPEND( [<lUnlockRecords>] ) | Append a new record to the database in the current work area
 Function DBCLEARFIL()   | Clear a filter condition
 Function DBCLEARIND()   | Close all indexes for the current work area
 Function DBCLEARREL()   | Clear active relations
@@ -158,62 +162,86 @@ Function DBCLOSEALL()   | Close all occupied work areas
 Function DBCLOSEAREA()  | Close a work area
 Function DBCOMMIT()     | Flush pending updates
 Function DBCOMMITALL()  | Flush pending updates in all work areas
-Function DBCREATE()     | Create a database file from a database structure array
-Function DBCREATEIND()  | Create an index file
+Function DBCOPYEXTSTRUCT( <cDatabaseExt> ) --> lSuccess | Creates a structure extended database file. 
+Function DBCOPYSTRUCT( <cDatabase>, [<aFieldList>] ) | Creates a new database based on the current database structure. 
+Function DBCREATE(<cDatabase>,<aStructure>,[<cDriver>],[<lNewArea>],[<cAlias>]     ) | Create a database file from a database structure array
+Function DBCREATEIND(<cIndexFile>, <cIndexExpr>, [<bIndexExpr>], [<lUnique>], [<cIndexName>]  )  | Create an index file
 Function DBDELETE()     | Mark a record for deletion
-Function DBEDIT()       | Browse records in a table layout
-Function DBEVAL()       | Evaluate code block for each record matching scope/condition
-Function DBF()*         | Return current alias name
-Function DBFIELDINFO()  | Return and optionally change information about a field
-Function DBFILEGET()    | Insert the contents of a field into a file
-Function DBFILEPUT()    | Insert the contents of a file into a field
-Function DBFILTER()     | Return the current filter expression as a character string
+Function DBEDIT([<nTop>], [<nLeft>], [<nBottom>], [<nRight>], [<aColumns>], [<bcUserFunc>], [<xSayPictures>], [<xColumnHeaders>], [<xHeadingSep>], [<xColumnSep>], [<xFootingSep>], [<xColumnFootings>],[<xColumnPreBlock>],[<xColumnPostBlock>])| Browse records in a table layout
+Function DBEVAL( <bBlock>, [<bForCondition>], [<bWhileCondition>], [<nNextRecords>],[<nRecord>],[<lRest>] ) | Evaluate code block for each record matching scope/condition
+Function DBF() *--> <cAliasName> | Return current alias name
+Function DBFIELDINFO( <nInfo>, <nFieldPos> ) --> xFieldInfo | Return and optionally change information about a field
+Function DBFILEGET( <nFieldPos>, <cTargetFile>, <nMode> ) --> lSuccess | Insert the contents of a field into a file
+Function DBFILEPUT( <nFieldPos>, <cSourceFile> [,<Mode>] ) --> lSuccess | Insert the contents of a file into a field
+Function DBFILTER() --> cFilter | Return the current filter expression as a character string
+Function DBFSIZE() --> nFileSize | Returns the size of a database file in memory that is opened in a workarea.  
 Function DBGOBOTTOM()   | Move to the last logical record
-Function DBGOTO()       | Position record pointer to a specific identity
+Function DBGOTO( <xRecno> )       | Position record pointer to a specific identity
 Function DBGOTOP()      | Move to the first logical record
-Function DBINFO()       | Return and optionally change database file information
-Function DBORDERINFO()  | Return and optionally change order and index file information
+Function DBINFO( <nDefine>, [<xNewSetting>] ) --> xCurrentSetting | Return and optionally change database file information
+Function DBORDERINFO( <nDefine>, [<cIndexFile>], [<nOrder> OR <cIndexName>], [<xNewSetting>] ) --> xCurrentSetting | Return and optionally change order and index file information
 Function DBRECALL()     | Reinstate a record marked for deletion
-Function DBRECORDINFO() | Return and optionally change information about a record
+Function DBRECORDINFO( <nDefine>, [<nRecord>], [<xNewSetting>] ) --> xOldSetting  | Return and optionally change information about a record
 Function DBREINDEX()    | Recreate all active indexes for the current work area
-Function DBRELATION()   | Return the linking expression of a specified relation
-Function DBRLOCK()      | Lock the record at the current or specified identity
-Function DBRLOCKLIST()  | Return an array of the current lock list
-Function DBRSELECT()    | Return the target work area number of a relation
-Function DBRUNLOCK()    | Release all or specified record locks
-Function DBSEEK()       | Move to the record having the specified key value
-Function DBSELECTAR()   | Change the current work area
-Function DBSETDRIVER()  | Return the database driver and optionally set a new driver
-Function DBSETFILTER()  | Set a filter condition
-Function DBSETINDEX()   | Empty orders from an order bag into the order list
-Function DBSETORDER()   | Set the controlling order
-Function DBSETRELAT()   | Relate two work areas
-Function DBSKIP()       | Move relative to the current record
-Function DBSTRUCT()     | Create an array containing the structure of a database file
+Function DBRELATION( <nRelation> ) --> cLinkExpression | Return the linking expression of a specified relation
+Function DBRLOCK( [<xRecno>] ) --> lSuccess | Lock the record at the current or specified identity
+Function DBRLOCKLIST() --> aLockedRecords | Return an array of the current lock list
+Function DBRSELECT( <nRelation> ) --> nWorkArea | Return the target work area number of a relation
+Function DBRUNLOCK(  [<xRecno>] ) | Release all or specified record locks
+Function DBSEEK( <xValue>, [<lSoftSeek>], [<lFindLast>] ) --> lFound | Move to the record having the specified key value
+Function DBSELECTAREA( <cAlias> | <nWorkArea> ) | Change the current work area
+Function DBSETDRIVER( [<cRddName>] ) --> cPreviousRDD | Return the database driver and optionally set a new driver
+Function DBSETFILTER( <bFilter>, [<cFilter>] )  | Set a filter condition
+Function DBSETINDEX( <cIndexFile> )   | Empty orders from an order bag into the order list
+Function DBSETORDER( <nIndexPos> )   | Set the controlling order
+Function DBSETRELATION( <nArea> OR <cAlias>, <bRelation>, <cRelation>, [<lScoped>] ) | Relate two work areas
+Function DBSKIP( [<nRecords>] )       | Move relative to the current record
+Function DBSKIPPER( <nSkipRequest> ) --> nSkipResult | Helper function for browse objects to skip a database
+Function DBSORT( <cDatabase>, <aFields>, [<bFor>], [<bWhile>], [<nNext>], [<nRecord>], [<lRest>] ) --> lSuccess | Creates a new, physically sorted database. 
+Function DBSTRUCT() --> aStructure | Create an array containing the structure of a database file
+Function DBTABLEEXT() --> cFileExtension | Retrieves the default database file extension of the current RDD. 
 Function DBUNLOCK()     | Release all locks for the current work area
 Function DBUNLOCKALL()  | Release all locks for all work areas
-Function DBUSEAREA()    | Use a database file in a work area
-Function DELETED()      | Return the deleted status of the current record
-Function DESCEND()      | Create a descending index key value
-Function DEVOUT()       | Write a value to the current device
-Function DEVOUTPICT()   | Write a value to the current device using a picture clause
-Function DEVPOS()       | Move the cursor or printhead to a new position
-Function DIRCHANGE()    | Change the current DOS directory
-Function DIRECTORY()    | Create an array of directory and file information
-Function DIRMAKE()      | Create a directory
-Function DIRREMOVE()    | Remove a directory
-Function DISKCHANGE()   | Change the current DOS disk drive
-Function DISKNAME()     | Return the current DOS drive
-Function DISKSPACE()    | Return the space available on a specified disk
+Function DBUPDATE( <cAlias>, <bReplace>, <bExpression>, [<lRandom>] ) --> lSuccess | Updates records in the current work area from a second work area. 
+Function DBUSEAREA( [<lNewArea>], [<cRddName>], <cDatabase>,[<cAlias>], [<lShared>], [<lReadonly>],[<cCodePage>],[<nConnection>] ) | Use a database file in a work area
+Function DEFAULT( @<varName>, <xDefaultValue> ) | Assigns a default value to a variable. 
+Function DEFPATH() --> cDefaultPath | Returns the SET DEFAULT directory.
+Function DELETED() --> lIsDeleted | Return the deleted status of the current record
+Function DELETEFILE( <cFileName> ) --> nErrorCode | Deletes a file with error handling. 
+Function DESCEND(<xValue> ) --> xDescend  | Create a descending index key value
+Function DEVOUT( <expression>, [<cColorString>], [<nRow>, <nCol>] )| Write a value to the current device
+Function DEVOUTPICT( <expression>, <cPicture> [,<cColorString>]    | Write a value to the current device using a picture clause
+Function DEVPOS( <nRow>, <nCol> ) | Move the cursor or printhead to a new position
+Function DIRCHANGE( <cDirectory> ) --> nOSError | Change the current DOS directory
+Function DIRECTORY(  <cDirSpec>, [<cAttributes>] ) --> aDirectory | Create an array of directory and file information
+Function DIRECTORYRECURSE( <cDirSpec>, [<cAttributes>] ) --> aDirectory | Loads file information recursively into a two-dimensional array. 
+Function DIRMAKE( <cDirectory> ) --> nErrorCode | Create a directory
+Function DIRNAME() --> cDirectory | Returns the current directory.
+Function DIRREMOVE( <cDirectory> ) --> nOSError | Remove a directory
+Function DISABLEWAITLOCKS( [<lNewMode>] ) --> lOldMode | Toggles the exclusive file opening mode.  
+Function DISKCHANGE( <cDrive> ) --> lSuccess | Change the current DOS disk drive
+Function DISKFREE( [<cDrive>] ) --> nFreeDiskSpace | Returns the free storage space of a disk drive in bytes. 
+Function DISKNAME() --> cDrive| Return the current DOS drive
+Function DISKREADY( [<cDrive>], [<lOSErrorMsg>] ) --> lDriveIsReady | Test if a disk drive is ready.
+Function DISKREADYW( [<cDrive>], [<lOSErrorMsg>] ) --> lIsWriteable | Tests if a drive can be written to. 
+Function DISKSPACE(  [<nDrive>], [<nType>] ) --> nBytes | Return the space available on a specified disk
+Function DISKTOTAL( [<cDrive>] ) --> nTotalBytes | Returns the totl storage space of a disk drive in bytes. 
+Function DISKUSED( [<cDrive>] ) --> nUsedDiskSpace | Returns the used storage space of a disk drive in bytes.  
 Function DISPBEGIN()    | Begin buffering screen output
-Function DISPBOX()      | Display a box on the screen
-Function DISPCOUNT()    | Return the number of pending DISPEND() requests
+Function DISPBOX( <nTop>, <nLeft>, <nBottom>, <nRight>, [<cnBoxString>], [<cColor>] | Display a box on the screen
+Function DISPCOUNT() --> nDispCount    | Return the number of pending DISPEND() requests
 Function DISPEND()      | Display buffered screen updates
-Function DISPOUT()      | Write a value to the display
-Function DOSERROR()     | Return the last DOS error number
-Function DOW()          | Convert a date value to a numeric day of the week
-Function DTOC()         | Convert a date value to a character string
-Function DTOS()         | Convert a date value to a string formatted as yyyymmdd
+Function DISPOUT( <expression>, [<cColor>] )    | Write a value to the display
+Function DISPOUTAT( <nRow>, <nCol>, <expression>, [<cColor>], [<lSetPos>] ) | Displays a value on the screen at a certain position.
+Function DISPOUTATSETPOS( [<lNewSetting>] ) --> lOldSetting | Toggles update of the screen cursor with DispOutAt(). 
+Function DOSERROR( [<nNewErrorCode>] ) --> nOsErrorCode | Return the last DOS error number
+Function DOSPARAM() --> cCommandLine | Returns the command line parameters passed to an application.
+Function DOW( <dDate> ) --> nDayOfWeek | Convert a date value to a numeric day of the week
+Function DOY( [<dDate>] ) --> nDayOfYear | Returns the day number of a Date value in a year. 
+Function DRIVETYPE( [<cDrive>] ) --> nDriveType | Determines the type of a drive. 
+Function DTOC( <dDate>)  --> cDateString  | Convert a date value to a character string
+Function DTOR( <nDegrees> ) --> nRadians | Converts an angle from degrees to radians. 
+Function DTOS( <dDate>)  --> cYYYYMMDD | Convert a date value to a string formatted as yyyymmdd
 
 Function EMPTY()        | Determine if the result of an expression is empty
 Function EOF()          | Determine when end of file is encountered
