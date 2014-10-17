@@ -1,37 +1,37 @@
-Function AADD(<aTarget>, <expValue>) --> Value | Add a new element to the end of an array
-Function ABS(<nExp>) --> nPositive | Return the absolute value of a numeric expression
-Function ACHOICE( <nTop>, <nLeft>, <nBottom>, <nRight>,<acMenuItems>, [<alSelectableItems> OR <lSelectableItems>], [<cUserFunction>], [<nInitialItem>], [<nWindowRow>]) --> nPosition | Execute a pop-up menu
-Function ACLONE(<aSource>) --> aDuplicate | Duplicate a nested or multidimensional array
-Function ACOPY( <aSource> ,<aTarget>, [<nSourceStart>],[<nCount>], [<nTargetStart>] ) --> aTarget| Copy elements from one array to another
-Function ACOS( <nRadians> ) --> nArcCosine | Calculates the arc cosine.
+Function AADD(<aTarget>, <expValue>) --> Value | Add a new element to the end of an array ( Library:RTL )
+Function ABS(<nExp>) --> nPositive | Return the absolute value of a numeric expression ( Library:RTL )
+Function ACHOICE( <nTop>, <nLeft>, <nBottom>, <nRight>,<acMenuItems>, [<alSelectableItems> OR <lSelectableItems>], [<cUserFunction>], [<nInitialItem>], [<nWindowRow>]) --> nPosition | Execute a pop-up menu ( Library:RTL )
+Function ACLONE(<aSource>) --> aDuplicate | Duplicate a nested or multidimensional array ( Library:RTL )
+Function ACOPY( <aSource> ,<aTarget>, [<nSourceStart>],[<nCount>], [<nTargetStart>] ) --> aTarget| Copy elements from one array to another ( Library:RTL )
+Function ACOS( <nRadians> ) --> nArcCosine | Calculates the arc cosine. 
 Function ADDASCII( <cString>, <nValue>, [<nPos>] ) --> cNewString | Adds a numeric value to the ASCII code of a specified character in a string.
 Function ADDMONTH( <dDate>, <nMonths> ) --> dNewDate |Adds or subtracts a number of months to/from a Date value.
-Function ADEL( <aArray>, <nElement>, [<lShrink>] ) --> aArray | Delete an array element
-Function ADIR( [<cFileMask>], [<aName>],[<aSize>],[<aDate>],[<aTime>],[<aAttr>]) --> nDirEnries | Fill a series of arrays with directory information
-Function AEVAL( <aArray>, <bBlock>, [<nStart>], [<nCount>] ) --> aArray | Execute a code block for each element in an array
-Function AFIELDS( [<aFieldName>],[<aFieldType>],[<aFieldLen>],[<aFieldDec>] ) --> nCount| Fill arrays with the structure of the current database file
-Function AFILL( <aArray>, <expression>, [<nStart>], [<nCount>] ) --> aArray | Fill an array with a specified value
+Function ADEL( <aArray>, <nElement>, [<lShrink>] ) --> aArray | Delete an array element ( Library:RTL )
+Function ADIR( [<cFileMask>], [<aName>],[<aSize>],[<aDate>],[<aTime>],[<aAttr>]) --> nDirEnries | Fill a series of arrays with directory information ( Library:RTL )
+Function AEVAL( <aArray>, <bBlock>, [<nStart>], [<nCount>] ) --> aArray | Execute a code block for each element in an array ( Library:RTL )
+Function AFIELDS( [<aFieldName>],[<aFieldType>],[<aFieldLen>],[<aFieldDec>] ) --> nCount| Fill arrays with the structure of the current database file ( Library:RTL )
+Function AFILL( <aArray>, <expression>, [<nStart>], [<nCount>] ) --> aArray | Fill an array with a specified value ( Library:RTL )
 Function AFTERATNUM( <cSearch>, <cString>,[<nCount>], [<nSkipChars>] ) --> cResult | Extracts the remainder of a string after the last occurrence of a search string.
-Function AINS( <aArray>, <nElement>, [<xValue>], [<lGrow>] ) --> aArray | Inserts an element into an array
+Function AINS( <aArray>, <nElement>, [<xValue>], [<lGrow>] ) --> aArray | Inserts an element into an array ( Library:RTL )
 Function ALENALLOC( <aArray> ) --> nElements | Determines for how much array elements memory is pre-allocated.
-Function ALERT( <xMessage>, [<aOptions>], [<cColor>], [<nDelay>] ) --> nChoice | Display a simple modal dialog box
-Function ALIAS( [<nWorkArea>] ) --> cAlias | Return a specified  work area alias
-Function ALLTRIM( <cString> ) --> cTrimmed | Remove leading and trailing spaces from a character string
-Function ALTD( [<nAction>] ) | Invoke the CA-Clipper debugger
+Function ALERT( <xMessage>, [<aOptions>], [<cColor>], [<nDelay>] ) --> nChoice | Display a simple modal dialog box ( Library:RTL )
+Function ALIAS( [<nWorkArea>] ) --> cAlias | Return a specified  work area alias ( Library:RTL )
+Function ALLTRIM( <cString> ) --> cTrimmed | Remove leading and trailing spaces from a character string ( Library:RTL )
+Function ALTD( [<nAction>] ) | Invoke the CA-Clipper debugger ( Library:RTL )
 Function AMPM( <cTime> ) --> cFormattedTime | Converts a time string into am/pm format.
 Function ANSITOHTML( <cAnsiString> ) --> cHtmlString | Inserts HTML character entities into an ANSI text string
-Function ARRAY( <nDim1> [, <nDimN,...>] ) --> aArray| Create an uninitialized array of specified length
-Function ASC( <cCharacter> ) --> nAsciiCode | Convert a character to its ASCII value
-Function ASCAN( <aArray>,<xbSearch>,[<nStart>],[<nCount>], [<lExact>], [<lASCII>]  ) --> nElement | Scan an array for a value or until a block returns true (.T.)
+Function ARRAY( <nDim1> [, <nDimN,...>] ) --> aArray| Create an uninitialized array of specified length ( Library:RTL )
+Function ASC( <cCharacter> ) --> nAsciiCode | Convert a character to its ASCII value ( Library:RTL )
+Function ASCAN( <aArray>,<xbSearch>,[<nStart>],[<nCount>], [<lExact>], [<lASCII>]  ) --> nElement | Scan an array for a value or until a block returns true (.T.) ( Library:RTL )
 Function ASCIISUM( <cString> ) --> nASCIISum | Sums the ASCII codes of all characters in a string. 
 Function ASCPOS( <cString>, [<nPos>] ) --> nASCIICode | Determines the ASCII code of a specified character in a string.
 Function ASIN( <nRadians> ) --> nArcSine | Calculates the arc sine. 
-Function ASIZE( <aArray>, <nCount> ) --> aArray   Grow or shrink an array
+Function ASIZE( <aArray>, <nCount> ) --> aArray   Grow or shrink an array | Changes the number of elements in an array. ( Library:RTL ) 
 Function ASIZEALLOC( <aArray>, <nCount>  ) --> aArray | Pre-allocates memory for an array.
-Function ASORT( <aArray>, [<nStart>], [<nCount>], [<bSort>] ) --> aArray | Sort an array
-Function AT( <cSearch>, <cString>, [<nStart>], [<nEnd>] ) --> nPos | Return the position of a substring within a character string
+Function ASORT( <aArray>, [<nStart>], [<nCount>], [<bSort>] ) --> aArray | Sort an array ( Library:RTL )
+Function AT( <cSearch>, <cString>, [<nStart>], [<nEnd>] ) --> nPos | Return the position of a substring within a character string ( Library:RTL )
 Function ATADJUST( <cSearch>, <cString>, <nEndPos>, [<nCount>], [<nSkipChars>], [<xInsChar>] ) --> cJustified | Justifies a character sequence within a string
-Function ATAIL( <aArray> ) --> xValue | Return the highest numbered element of an array
+Function ATAIL( <aArray> ) --> xValue | Return the highest numbered element of an array ( Library:RTL )
 Function ATAN( <nRadians> ) --> nArcTangent | Calculates the arc tangent.
 Function ATN2( <nSine> , <nCosine> ) --> nRadians| Calculates the radians of an angle from sine and cosine
 Function ATNUM( <cSearch>, <cString>, [<nCount>], [<nSkipChars>] ) --> nPos | Searches multiple occurrences of a substring within a string.
@@ -40,31 +40,31 @@ Function ATSKIPSTRINGS( <cSearch>, <cString> ) --> nPos | Locates the position o
 Function ATTOKEN( <cString>, [<cDelimiter>], [<nCount>] ) --> nPos | Returns the position of the n-th token in a string. 
 
 Function BEFORATNUM( <cSearch>, <cString>, [<nCount>], [<nSkipChars>] ) --> cResult | Extracts the remainder of a string before the last occurrance of a search string.
-Function BIN2I( <cInteger> ) --> nNumber | Converts an unsigned long binary integer (4 bytes) into a numeric value
-Function BIN2L( <cInteger> ) --> nNumber | Converts a signed long binary integer (4 bytes) into a numeric value.
-Function BIN2W( <cInteger> ) --> nNumber | Converts an unsigned short binary integer (2 bytes) into a numeric value.
+Function BIN2I( <cInteger> ) --> nNumber | Converts an unsigned long binary integer (4 bytes) into a numeric value ( Library:RTL )
+Function BIN2L( <cInteger> ) --> nNumber | Converts a signed long binary integer (4 bytes) into a numeric value. ( Library:RTL )                   
+Function BIN2W( <cInteger> ) --> nNumber | Converts an unsigned short binary integer (2 bytes) into a numeric value. ( Library:RTL )
 Function BITTOC( <nInteger>, <cBitPattern>, [<lSpaces>] ) --> cResult | Translates bits of an integer to a character string
 Function BLANK( <xValue>, [<lSpaces>] ) --> xEmptyValue | Returns empty values for the data types A, C, D, L, M and N.
-Function BLOBDIRECTEXPO( <nBlobID>, <cTargetFile>, [<nMode>] ) --> lSuccess| Export the contents of a BLOB pointer to a file
-Function BLOBDIRECTGET( <nBlobID>, [<nStart>], [<nCount>] ) --> xBlobData| Retrieve data from a BLOB file without referencing a field
-Function BLOBDIRECTIMP( <nOldBlobID>, <cSourceFile> ) --> nNewBlobID| Import a file into a BLOB file and return pointer to the data
-Function BLOBDIRECTPUT( <nOldblobID>, <xBlobData> ) --> nNewblobID | Put data in a BLOB file without referencing a specific field
-Function BLOBEXPORT( <nFieldPos>, <cTargetFile>, [<nMode>] ) --> lSuccess | Copy the contents of a memo field number to a BLOB file
-Function BLOBGET( <nFieldPos>, [<nStart>], [<nCount>] ) --> xBlobData | Get the contents of a BLOB, identified by memo field number
-Function BLOBIMPORT( <nFieldPos>, <cSourceFile> ) --> lSuccess   | Read the contents of a BLOB file into a memo field
-Function BLOBROOTDELETE() --> lSuccess |Deleted the root area of a BLOB file
-Function BLOBROOTGET() --> xBlobData | Retrieve the data from the root area of a BLOB file
-Function BLOBROOTLOCK() --> lSuccess | Obtain a lock on the root area of a BLOB file
-Function BLOBROOTPUT() --> lSuccess | Store data in the root area of a BLOB file
-Function BLOBROOTUNLOC() | Release the lock on a BLOB file's root area
-Function BOF() --> lBeginOfFile | Determine when beginning of file is encountered
+Function BLOBDIRECTEXPO( <nBlobID>, <cTargetFile>, [<nMode>] ) --> lSuccess| Export the contents of a BLOB pointer to a file ( Library:RTL )
+Function BLOBDIRECTGET( <nBlobID>, [<nStart>], [<nCount>] ) --> xBlobData| Retrieve data from a BLOB file without referencing a field ( Library:RTL )
+Function BLOBDIRECTIMP( <nOldBlobID>, <cSourceFile> ) --> nNewBlobID| Import a file into a BLOB file and return pointer to the data ( Library:RTL )
+Function BLOBDIRECTPUT( <nOldblobID>, <xBlobData> ) --> nNewblobID | Put data in a BLOB file without referencing a specific field ( Library:RTL )
+Function BLOBEXPORT( <nFieldPos>, <cTargetFile>, [<nMode>] ) --> lSuccess | Copy the contents of a memo field number to a BLOB file ( Library:RTL )
+Function BLOBGET( <nFieldPos>, [<nStart>], [<nCount>] ) --> xBlobData | Get the contents of a BLOB, identified by memo field number ( Library:RTL )
+Function BLOBIMPORT( <nFieldPos>, <cSourceFile> ) --> lSuccess   | Read the contents of a BLOB file into a memo field ( Library:RTL )
+Function BLOBROOTDELETE() --> lSuccess |Deleted the root area of a BLOB file ( Library:RTL )
+Function BLOBROOTGET() --> xBlobData | Retrieve the data from the root area of a BLOB file  ( Library:RTL )
+Function BLOBROOTLOCK() --> lSuccess | Obtain a lock on the root area of a BLOB file ( Library:RTL )
+Function BLOBROOTPUT() --> lSuccess | Store data in the root area of a BLOB file ( Library:RTL )
+Function BLOBROOTUNLOC() | Release the lock on a BLOB file's root area ( Library:RTL )
+Function BOF() --> lBeginOfFile | Determine when beginning of file is encountered ( Library:RTL )
 Functiom BOM( [<dDate>] ) --> dFirstDayOfMonth | Returns the date of the first day of a month
 Function BOQ( [<dDate>] ) --> dFirstDayOfQuarter | Returns the date of the first day of a quarter
 Function BOY( [<dDate>] ) --> dFirstDayOfYear | Returns the date of the first day of a year
-Function BREAK()        | Branch out of a BEGIN SEQUENCE...END construct
-Function BROWSE( [<nTop>],[<nLeft>], [<nBottom>], [<nRight>]   ) --> lOk | Browse records within a window
+Function BREAK()        | Branch out of a BEGIN SEQUENCE...END construct ( Library:RTL )
+Function BROWSE( [<nTop>],[<nLeft>], [<nBottom>], [<nRight>]   ) --> lOk | Browse records within a window ( Library:RTL )
 
-Function CDOW <dDate> ) --> cDayName  | Convert a date value to a character day of the week
+Function CDOW <dDate> ) --> cDayName  | Convert a date value to a character day of the week ( Library:RTL )
 Function CEILING( <nValue> ) --> nInteger | Rounds a decimal number to the next higher integer
 Function CELSIUS( <nFahrenheit> ) --> nCelsius |Converts degrees Fahrenheit to Celsius
 Function CENTER( <cString>, [<nLength>], [<cPadChar>], [<lBothSides>] ) --> cCenteredString | Returns a string for centered display
@@ -99,17 +99,17 @@ Function CHARUNPACK( <cCompressed> ) --> cUncompressed | Uncompresses a CharPack
 Function CHARWIN( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>], [<xNewChar>], [<xOldChar>]  ) |Replaces characters in a specified screen area.  
 Function CHARXOR( <cString1>, <cString2> ) --> cResult | Binary XORs the ASCII codes of characters in two strings.
 Function CHECKSUM( <cString> ) --> nCheckSum | Calculates the checksum for a character string. 
-Function CHR( <nAsciiCode> )  --> cCharacter | Convert an ASCII code to a character value
+Function CHR( <nAsciiCode> )  --> cCharacter | Convert an ASCII code to a character value ( Library:RTL )
 Function CLEARBIT( <nInteger> OR <cHex>,[<nBitPos,...>]) --> nNewValue | Sets one or more bits of a numeric integer value to 0. 
 Function CLEAREOL( [<nRow>], [<nCol>], [<xColor>], [<xChar>] ) | Clears a row on the screen beginning at a specified position. 
 Function CLEARSLOW( <nDelay>, [<nTop>], [<nLeft>], [<nBottom>], [<nRight>], [<xChar>] ) | Clears a screen area incrementally with a delayed imploding effect. 
 Function CLEARWIN( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>],  [<xColor>], [<xChar>] ) | Clears all or parts of the screen.  
 Function CLEOL( [<nRow>], [<nCol>] ) | Clears characters and colors in a row on the screen. 
 Function CLWIN( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>] ) | Clears characters and colors on the screen.   
-Function CMONTH( <dDate> ) --> cMonthName | Convert a date to a character month name
-Function COL() --> nColPos | Return the screen cursor column position
-Function COLORREPL( [<xNewColor>], [<xOldColor>] ) | Replaces color attributes on the screen. 
-Function COLORSELECT( <nColorIndex> )  | Activate attribute in current color settings
+Function CMONTH( <dDate> ) --> cMonthName | Convert a date to a character month name ( Library:RTL )
+Function COL() --> nColPos | Return the screen cursor column position ( Library:RTL )
+Function COLORREPL( [<xNewColor>], [<xOldColor>] ) | Replaces color attributes on the screen. ( Library:RTL ) 
+Function COLORSELECT( <nColorIndex> )  | Activate attribute in current color settings. ( Library:RTL )
 Function COLORTON( <cColor> ) --> nColorAttribute | Converts a color value to a numeric color attribute.
 Function COLORWIN( [<nTop>], [<nLeft>], [<nBottom>], [<nRight>], [<xNewColor>], [<xOldColor>] ) | Replaces a color attribute in a screen region. 
 Function COMPLEMENT( <xValue> ) --> xComplement | Creates the complement for values of data type C, D, L, M, N 
@@ -132,83 +132,83 @@ Function CSETSAFETY( [<lNewMode>] ) --> lOldMode | Retrieves and/or changes the 
 Function CSTR( <xValue> ) --> cString | Converts a value to a character string. 
 Function CSTRTOVAL( <cString>, <cValtype> ) --> xValue | Converts a character string to a value of specific data type. 
 Function CTOBIT( <cString> , <cBitPattern> ) --> nInteger | Converts a character string to an integer based on a bit pattern. 
-Function CTOD( <cDateString> ) --> dDate | Convert a date string to a date value
+Function CTOD( <cDateString> ) --> dDate | Convert a date string to a date value ( Library:RTL )
 Function CTODOW( <cDayName> ) --> nDayOfWeek | Returns the number of a week day from its name.
 Function CTOF( <cFloat> ) --> nNumber | Converts an 8 byte string to a floating point number.
 Function CTOMONTH( <cMonthName> ) --> nMonth | Returns the number of a month from its name.
 Function CTON( <cDigits>, [<nBase>], [<lNegative>]) --> nInteger | Converts a string of digits to an integer of the specified base.
 Function CTOT( <cDateTimeString> ) --> dDateTime | Converts a character string into a DateTime value 
 Function CURDIR( [<cDrive>] ) --> cDirPath | Return the current DOS directory
-Function CURDIR( [<cDrive>] ) --> cDirPath | Returns the current directory of a drive including directory separators. 
+Function CURDIRX( [<cDrive>] ) --> cDirPath | Returns the current directory of a drive including directory separators. 
 Function CURDRIVE( [<cNewDrive>] ) --> cOldDrive | Determines or changes the current disk drive
 Function CURRENTGET() --> nCurrentGetPos | Returns the position of the current Get field in the Getlist array. 
 
-Function DATE() --> dDate| Return the system date as a date value
-Function DATETIME() --> dDateTime | Returns the current date and time from the operating system. 
-Function DAY( <dDate> ) --> nDay | Return the day of the month as a numeric value
+Function DATE() --> dDate| Return the system date as a date value. ( Library:RTL )
+Function DATETIME() --> dDateTime | Returns the current date and time from the operating system.( Library:RTL )
+Function DAY( <dDate> ) --> nDay | Return the day of the month as a numeric value. ( Library:RTL )
 Function DAYS( <nSeconds> ) --> nDays | Calculates the number of days from elapsed seconds. 
 Function DAYSINMONTH( <nMonth>, [<lLeapYear>] ) --> nDaysInMonth | Returns the number of days in a month. 
 Function DAYSTOMONTH( <nMonth>, [<lLeapYear>] ) --> nDays | Returns the number of days from first January to the beginning of a month. 
-Function DBAPPEND( [<lUnlockRecords>] ) | Append a new record to the database in the current work area
-Function DBCLEARFIL()   | Clear a filter condition
-Function DBCLEARIND()   | Close all indexes for the current work area
-Function DBCLEARREL()   | Clear active relations
-Function DBCLOSEALL()   | Close all occupied work areas
-Function DBCLOSEAREA()  | Close a work area
-Function DBCOMMIT()     | Flush pending updates
-Function DBCOMMITALL()  | Flush pending updates in all work areas
+Function DBAPPEND( [<lUnlockRecords>] ) | Append a new record to the database in the current work area. ( Library:RTL )
+Function DBCLEARFIL()   | Clear a filter condition. ( Library:RTL )
+Function DBCLEARIND()   | Close all indexes for the current work area. ( Library:RTL )
+Function DBCLEARREL()   | Clear active relations. ( Library:RTL )
+Function DBCLOSEALL()   | Close all occupied work areas. ( Library:RTL )
+Function DBCLOSEAREA()  | Close a work area. ( Library:RTL )
+Function DBCOMMIT()     | Flush pending updates. ( Library:RTL )
+Function DBCOMMITALL()  | Flush pending updates in all work areas. ( Library:RTL )
 Function DBCOPYEXTSTRUCT( <cDatabaseExt> ) --> lSuccess | Creates a structure extended database file. 
 Function DBCOPYSTRUCT( <cDatabase>, [<aFieldList>] ) | Creates a new database based on the current database structure. 
-Function DBCREATE(<cDatabase>,<aStructure>,[<cDriver>],[<lNewArea>],[<cAlias>]     ) | Create a database file from a database structure array
-Function DBCREATEIND(<cIndexFile>, <cIndexExpr>, [<bIndexExpr>], [<lUnique>], [<cIndexName>]  )  | Create an index file
-Function DBDELETE()     | Mark a record for deletion
-Function DBEDIT([<nTop>], [<nLeft>], [<nBottom>], [<nRight>], [<aColumns>], [<bcUserFunc>], [<xSayPictures>], [<xColumnHeaders>], [<xHeadingSep>], [<xColumnSep>], [<xFootingSep>], [<xColumnFootings>],[<xColumnPreBlock>],[<xColumnPostBlock>])| Browse records in a table layout
-Function DBEVAL( <bBlock>, [<bForCondition>], [<bWhileCondition>], [<nNextRecords>],[<nRecord>],[<lRest>] ) | Evaluate code block for each record matching scope/condition
-Function DBF() *--> <cAliasName> | Return current alias name
-Function DBFIELDINFO( <nInfo>, <nFieldPos> ) --> xFieldInfo | Return and optionally change information about a field
-Function DBFILEGET( <nFieldPos>, <cTargetFile>, <nMode> ) --> lSuccess | Insert the contents of a field into a file
-Function DBFILEPUT( <nFieldPos>, <cSourceFile> [,<Mode>] ) --> lSuccess | Insert the contents of a file into a field
-Function DBFILTER() --> cFilter | Return the current filter expression as a character string
+Function DBCREATE(<cDatabase>,<aStructure>,[<cDriver>],[<lNewArea>],[<cAlias>]     ) | Create a database file from a database structure array. ( Library:RTL )
+Function DBCREATEIND(<cIndexFile>, <cIndexExpr>, [<bIndexExpr>], [<lUnique>], [<cIndexName>]  )  | Create an index file. ( Library:RTL )
+Function DBDELETE()     | Mark a record for deletion. ( Library:RTL )
+Function DBEDIT([<nTop>], [<nLeft>], [<nBottom>], [<nRight>], [<aColumns>], [<bcUserFunc>], [<xSayPictures>], [<xColumnHeaders>], [<xHeadingSep>], [<xColumnSep>], [<xFootingSep>], [<xColumnFootings>],[<xColumnPreBlock>],[<xColumnPostBlock>])| Browse records in a table layout. ( Library:RTL )
+Function DBEVAL( <bBlock>, [<bForCondition>], [<bWhileCondition>], [<nNextRecords>],[<nRecord>],[<lRest>] ) | Evaluate code block for each record matching scope/condition. ( Library:RTL )
+Function DBF() *--> <cAliasName> | Return current alias name. ( Library:RTL )
+Function DBFIELDINFO( <nInfo>, <nFieldPos> ) --> xFieldInfo | Return and optionally change information about a field. ( Library:RTL )
+Function DBFILEGET( <nFieldPos>, <cTargetFile>, <nMode> ) --> lSuccess | Insert the contents of a field into a file. ( Library:RTL )
+Function DBFILEPUT( <nFieldPos>, <cSourceFile> [,<Mode>] ) --> lSuccess | Insert the contents of a file into a field. ( Library:RTL )
+Function DBFILTER() --> cFilter | Return the current filter expression as a character string. ( Library:RTL )
 Function DBFSIZE() --> nFileSize | Returns the size of a database file in memory that is opened in a workarea.  
-Function DBGOBOTTOM()   | Move to the last logical record
-Function DBGOTO( <xRecno> )       | Position record pointer to a specific identity
-Function DBGOTOP()      | Move to the first logical record
-Function DBINFO( <nDefine>, [<xNewSetting>] ) --> xCurrentSetting | Return and optionally change database file information
-Function DBORDERINFO( <nDefine>, [<cIndexFile>], [<nOrder> OR <cIndexName>], [<xNewSetting>] ) --> xCurrentSetting | Return and optionally change order and index file information
-Function DBRECALL()     | Reinstate a record marked for deletion
-Function DBRECORDINFO( <nDefine>, [<nRecord>], [<xNewSetting>] ) --> xOldSetting  | Return and optionally change information about a record
-Function DBREINDEX()    | Recreate all active indexes for the current work area
-Function DBRELATION( <nRelation> ) --> cLinkExpression | Return the linking expression of a specified relation
-Function DBRLOCK( [<xRecno>] ) --> lSuccess | Lock the record at the current or specified identity
-Function DBRLOCKLIST() --> aLockedRecords | Return an array of the current lock list
-Function DBRSELECT( <nRelation> ) --> nWorkArea | Return the target work area number of a relation
-Function DBRUNLOCK(  [<xRecno>] ) | Release all or specified record locks
-Function DBSEEK( <xValue>, [<lSoftSeek>], [<lFindLast>] ) --> lFound | Move to the record having the specified key value
-Function DBSELECTAREA( <cAlias> | <nWorkArea> ) | Change the current work area
+Function DBGOBOTTOM()   | Move to the last logical record. ( Library:RTL )
+Function DBGOTO( <xRecno> )       | Position record pointer to a specific identity. ( Library:RTL )
+Function DBGOTOP()      | Move to the first logical record. ( Library:RTL )
+Function DBINFO( <nDefine>, [<xNewSetting>] ) --> xCurrentSetting | Return and optionally change database file information. ( Library:RTL )
+Function DBORDERINFO( <nDefine>, [<cIndexFile>], [<nOrder> OR <cIndexName>], [<xNewSetting>] ) --> xCurrentSetting | Return and optionally change order and index file information. ( Library:RTL )
+Function DBRECALL()     | Reinstate a record marked for deletion. ( Library:RTL )
+Function DBRECORDINFO( <nDefine>, [<nRecord>], [<xNewSetting>] ) --> xOldSetting  | Return and optionally change information about a record. ( Library:RTL )
+Function DBREINDEX()    | Recreate all active indexes for the current work area. ( Library:RTL )
+Function DBRELATION( <nRelation> ) --> cLinkExpression | Return the linking expression of a specified relation. ( Library:RTL )
+Function DBRLOCK( [<xRecno>] ) --> lSuccess | Lock the record at the current or specified identity. ( Library:RTL )
+Function DBRLOCKLIST() --> aLockedRecords | Return an array of the current lock list. ( Library:RTL )
+Function DBRSELECT( <nRelation> ) --> nWorkArea | Return the target work area number of a relation. ( Library:RTL )
+Function DBRUNLOCK(  [<xRecno>] ) | Release all or specified record locks. ( Library:RTL )
+Function DBSEEK( <xValue>, [<lSoftSeek>], [<lFindLast>] ) --> lFound | Move to the record having the specified key value. ( Library:RTL )
+Function DBSELECTAREA( <cAlias> | <nWorkArea> ) | Change the current work area. ( Library:RTL )
 Function DBSETDRIVER( [<cRddName>] ) --> cPreviousRDD | Return the database driver and optionally set a new driver
-Function DBSETFILTER( <bFilter>, [<cFilter>] )  | Set a filter condition
-Function DBSETINDEX( <cIndexFile> )   | Empty orders from an order bag into the order list
-Function DBSETORDER( <nIndexPos> )   | Set the controlling order
-Function DBSETRELATION( <nArea> OR <cAlias>, <bRelation>, <cRelation>, [<lScoped>] ) | Relate two work areas
-Function DBSKIP( [<nRecords>] )       | Move relative to the current record
-Function DBSKIPPER( <nSkipRequest> ) --> nSkipResult | Helper function for browse objects to skip a database
-Function DBSORT( <cDatabase>, <aFields>, [<bFor>], [<bWhile>], [<nNext>], [<nRecord>], [<lRest>] ) --> lSuccess | Creates a new, physically sorted database. 
-Function DBSTRUCT() --> aStructure | Create an array containing the structure of a database file
+Function DBSETFILTER( <bFilter>, [<cFilter>] )  | Set a filter condition. ( Library:RTL )
+Function DBSETINDEX( <cIndexFile> )   | Empty orders from an order bag into the order list. ( Library:RTL )
+Function DBSETORDER( <nIndexPos> )   | Set the controlling order. ( Library:RTL )
+Function DBSETRELATION( <nArea> OR <cAlias>, <bRelation>, <cRelation>, [<lScoped>] ) | Relate two work areas. ( Library:RTL )
+Function DBSKIP( [<nRecords>] )       | Move relative to the current record. ( Library:RTL )
+Function DBSKIPPER( <nSkipRequest> ) --> nSkipResult | Helper function for browse objects to skip a database. ( Library:RTL )
+Function DBSORT( <cDatabase>, <aFields>, [<bFor>], [<bWhile>], [<nNext>], [<nRecord>], [<lRest>] ) --> lSuccess | Creates a new, physically sorted database. ( Library:RTL ) 
+Function DBSTRUCT() --> aStructure | Create an array containing the structure of a database file. ( Library:RTL )
 Function DBTABLEEXT() --> cFileExtension | Retrieves the default database file extension of the current RDD. 
-Function DBUNLOCK()     | Release all locks for the current work area
-Function DBUNLOCKALL()  | Release all locks for all work areas
+Function DBUNLOCK()     | Release all locks for the current work area. ( Library:RTL )
+Function DBUNLOCKALL()  | Release all locks for all work areas. ( Library:RTL )
 Function DBUPDATE( <cAlias>, <bReplace>, <bExpression>, [<lRandom>] ) --> lSuccess | Updates records in the current work area from a second work area. 
-Function DBUSEAREA( [<lNewArea>], [<cRddName>], <cDatabase>,[<cAlias>], [<lShared>], [<lReadonly>],[<cCodePage>],[<nConnection>] ) | Use a database file in a work area
+Function DBUSEAREA( [<lNewArea>], [<cRddName>], <cDatabase>,[<cAlias>], [<lShared>], [<lReadonly>],[<cCodePage>],[<nConnection>] ) | Use a database file in a work area.( Library:RTL )
 Function DEFAULT( @<varName>, <xDefaultValue> ) | Assigns a default value to a variable. 
 Function DEFPATH() --> cDefaultPath | Returns the SET DEFAULT directory.
-Function DELETED() --> lIsDeleted | Return the deleted status of the current record
+Function DELETED() --> lIsDeleted | Return the deleted status of the current record.( Library:RTL )
 Function DELETEFILE( <cFileName> ) --> nErrorCode | Deletes a file with error handling. 
-Function DESCEND(<xValue> ) --> xDescend  | Create a descending index key value
-Function DEVOUT( <expression>, [<cColorString>], [<nRow>, <nCol>] )| Write a value to the current device
+Function DESCEND(<xValue> ) --> xDescend  | Create a descending index key value. ( Library:RTL )
+Function DEVOUT( <expression>, [<cColorString>], [<nRow>, <nCol>] )| Write a value to the current device. ( Library:RTL )
 Function DEVOUTPICT( <expression>, <cPicture> [,<cColorString>]    | Write a value to the current device using a picture clause
-Function DEVPOS( <nRow>, <nCol> ) | Move the cursor or printhead to a new position
+Function DEVPOS( <nRow>, <nCol> ) | Move the cursor or printhead to a new position. ( Library:RTL )
 Function DIRCHANGE( <cDirectory> ) --> nOSError | Change the current DOS directory
-Function DIRECTORY(  <cDirSpec>, [<cAttributes>] ) --> aDirectory | Create an array of directory and file information
+Function DIRECTORY(  <cDirSpec>, [<cAttributes>] ) --> aDirectory | Create an array of directory and file information. ( Library:RTL )
 Function DIRECTORYRECURSE( <cDirSpec>, [<cAttributes>] ) --> aDirectory | Loads file information recursively into a two-dimensional array. 
 Function DIRMAKE( <cDirectory> ) --> nErrorCode | Create a directory
 Function DIRNAME() --> cDirectory | Returns the current directory.
@@ -222,58 +222,58 @@ Function DISKREADYW( [<cDrive>], [<lOSErrorMsg>] ) --> lIsWriteable | Tests if a
 Function DISKSPACE(  [<nDrive>], [<nType>] ) --> nBytes | Return the space available on a specified disk
 Function DISKTOTAL( [<cDrive>] ) --> nTotalBytes | Returns the totl storage space of a disk drive in bytes. 
 Function DISKUSED( [<cDrive>] ) --> nUsedDiskSpace | Returns the used storage space of a disk drive in bytes.  
-Function DISPBEGIN()    | Begin buffering screen output
-Function DISPBOX( <nTop>, <nLeft>, <nBottom>, <nRight>, [<cnBoxString>], [<cColor>] | Display a box on the screen
+Function DISPBEGIN()    | Begin buffering screen output. ( Library:RTL )
+Function DISPBOX( <nTop>, <nLeft>, <nBottom>, <nRight>, [<cnBoxString>], [<cColor>] | Display a box on the screen. ( Library:RTL )
 Function DISPCOUNT() --> nDispCount    | Return the number of pending DISPEND() requests
-Function DISPEND()      | Display buffered screen updates
-Function DISPOUT( <expression>, [<cColor>] )    | Write a value to the display
-Function DISPOUTAT( <nRow>, <nCol>, <expression>, [<cColor>], [<lSetPos>] ) | Displays a value on the screen at a certain position.
-Function DISPOUTATSETPOS( [<lNewSetting>] ) --> lOldSetting | Toggles update of the screen cursor with DispOutAt(). 
-Function DOSERROR( [<nNewErrorCode>] ) --> nOsErrorCode | Return the last DOS error number
-Function DOSPARAM() --> cCommandLine | Returns the command line parameters passed to an application.
+Function DISPEND()      | Display buffered screen updates. ( Library:RTL )
+Function DISPOUT( <expression>, [<cColor>] )    | Write a value to the dislay.( Library:RTL )
+Function DISPOUTAT( <nRow>, <nCol>, <expression>, [<cColor>], [<lSetPos>] ) | Displays a value on the screen at a certain position.( Library:RTL )
+Function DISPOUTATSETPOS( [<lNewSetting>] ) --> lOldSetting | Toggles update of the screen cursor with DispOutAt(). ( Library:RTL ) 
+Function DOSERROR( [<nNewErrorCode>] ) --> nOsErrorCode | Return the last DOS error number. ( Library:RTL )
+Function DOSPARAM() --> cCommandLine | Returns the command line parameters passed to an application. ( Library:RTL )
 Function DOW( <dDate> ) --> nDayOfWeek | Convert a date value to a numeric day of the week
 Function DOY( [<dDate>] ) --> nDayOfYear | Returns the day number of a Date value in a year. 
 Function DRIVETYPE( [<cDrive>] ) --> nDriveType | Determines the type of a drive. 
-Function DTOC( <dDate>)  --> cDateString  | Convert a date value to a character string
+Function DTOC( <dDate>)  --> cDateString  | Convert a date value to a character string. ( Library:RTL )
 Function DTOR( <nDegrees> ) --> nRadians | Converts an angle from degrees to radians. 
-Function DTOS( <dDate>)  --> cYYYYMMDD | Convert a date value to a string formatted as yyyymmdd
+Function DTOS( <dDate>)  --> cYYYYMMDD | Convert a date value to a string formatted as yyyymmdd. ( Library:RTL )
 
 Function ELAPTIME( <cStartTime>, <cEndTime> ) --> cElapsedTime | Calculates the time elapsed between a start and an end time. 
-Function EMPTY( <expression> ) -->  lIsEmpty | Determine if the result of an expression is empty
+Function EMPTY( <expression> ) -->  lIsEmpty | Determine if the result of an expression is empty. ( Library:RTL )
 Function ENHANCED() | Selects the enhanced color of SetColor().  
-Function EOF()--> lIsEndOfFile | Determine when end of file is encountered
+Function EOF()--> lIsEndOfFile | Determine when end of file is encountered. ( Library:RTL )
 Function EOM( [<dDate>] ) --> dLastDayOfMonth | EoM( [<dDate>] ) --> dLastDayOfMonth
 Function EOQ( [<dDate>] ) --> dEndOfQuarter | Returns the date of the last day in a quarter. 
 Function EOY( [<dDate>] ) --> dLastDayOfYear | Returns the date for the last day of a year. 
 Function ERRORBLOCK([<bErrorBlock>] ) --> bLastErrorBlock   | Post a code block to execute when a runtime error occurs
-Function ERRORLEVEL( [<cSubSystem>  ], [<nGenCode>], [<nSubCode>], [<cOperation>], [<cDescription>], [ <aArgs> ], [<cModuleName> ], [<cProcName>], [<nProcLine>] ) | Set the CA-Clipper return code
-Function ERRORSYS( <bDefaultErrorBlock> ) | Installs the default error code block. 
-Function EVAL( <bBlock> [, <xValue,...> ] )--> xReturn | Evaluate a code block
+Function ERRORLEVEL( [<cSubSystem>  ], [<nGenCode>], [<nSubCode>], [<cOperation>], [<cDescription>], [ <aArgs> ], [<cModuleName> ], [<cProcName>], [<nProcLine>] ) | Set the CA-Clipper return code. ( Library:RTL )
+Function ERRORSYS( <bDefaultErrorBlock> ) | Installs the default error code block. ( Library:RTL ) 
+Function EVAL( <bBlock> [, <xValue,...> ] )--> xReturn | Evaluate a code block. ( Library:RTL )
 Function EXENAME() --> cExeFileName | Returns the EXE file name of an xHarbour application. 
-Function EXP(<nExponent> ) --> nAntiLogarithm | Calculate e**x
+Function EXP(<nExponent> ) --> nAntiLogarithm | Calculate e**x. ( Library:RTL )
 Function EXPAND( <cString>, [<nCount>], [<xChar>] ) --> cResult | Inserts characters between all characters in a string. 
 Function EXPONENT( <nFloat> ) --> nExponent | Calculates the exponent of a floating point number. 
 
 Function FACT( <nInteger> ) --> nFactorial | Calculates the factorial of a number.
 Function FAHRENHEIT( <nCelsius> ) --> nFahrenheit | Fahrenheit( <nCelsius> ) --> nFahrenheit
 Function FCHARCOUNT( <cFileName> ) --> nCharCount | Counts the number of characters in a text file ignoring white space characters. 
-Function FCLOSE( <nFileHandle> ) --> lSuccess | Close an open binary file and write DOS buffers to disk
-Function FCOUNT() --> nFieldCount  | Return the number of fields in the current .dbf file
-Function FCREATE( <cFileName>, [<nFileAttr>] ) --> nFileHandle | Create and/or truncate a binary file to zero-length
-Function FERASE( <cFileName> ) --> nSuccess | Delete a file from disk
-Function FERROR() --> nErrorCode| Test for errors after a binary file operation
-Function FIELDBLOCK( <cFieldName> ) --> bFieldBlock | Return a set-get code block for a given field
+Function FCLOSE( <nFileHandle> ) --> lSuccess | Close an open binary file and write DOS buffers to disk. ( Library:RTL )
+Function FCOUNT() --> nFieldCount  | Return the number of fields in the current .dbf file. ( Library:RTL )
+Function FCREATE( <cFileName>, [<nFileAttr>] ) --> nFileHandle | Create and/or truncate a binary file to zero-length. ( Library:RTL )
+Function FERASE( <cFileName> ) --> nSuccess | Delete a file from disk. ( Library:RTL )
+Function FERROR() --> nErrorCode| Test for errors after a binary file operation. ( Library:RTL )
+Function FIELDBLOCK( <cFieldName> ) --> bFieldBlock | Return a set-get code block for a given field. ( Library:RTL )
 Function FIELDDEC( <nFieldPos> ) --> nDecimalPlaces | Retrieves the number of decimal places of a field variable.
 Function FIELDDECI( <nFieldPos> ) --> nDecimals | Returns the decimal places of a database field. 
 Function FIELDGET( <nFieldPos> ) --> xFieldValue | Retrieve the value of a field using the field position
 Function FIELDLEN( <nFieldPos> ) --> nFieldLength | FieldLen( <nFieldPos> ) --> nFieldLength
-Function FIELDNAME( <nFieldPos> ) --> cFieldName | Return a field name from the current database (.dbf) file
+Function FIELDNAME( <nFieldPos> ) --> cFieldName | Return a field name from the current database (.dbf) file. ( Library:RTL )
 Function FIELDNUM( <cFieldName> ) --> nFieldPos | Returns the ordinal position of a field in a database. 
-Function FIELDPOS(<cFieldName> ) --> nFieldPos | Return the position of a field in a work area
-Function FIELDPUT( <nFieldPos>, <xValue> ) --> xAssigneValue | Set the value of a field variable using the field position
+Function FIELDPOS(<cFieldName> ) --> nFieldPos | Return the position of a field in a work area. ( Library:RTL )
+Function FIELDPUT( <nFieldPos>, <xValue> ) --> xAssigneValue | Set the value of a field variable using the field position. ( Library:RTL )
 Function FIELDSIZE( <nFieldPos> ) --> nFieldLength | Returns the length of a database field. 
 Function FIELDTYPE( <nFieldPos> ) --> cFieldType | Retrieves the data type of a field variable. 
-Function FIELDWBLOCK( <cFieldName>, <nWorkArea> ) --> bFieldWBlock | Return a set-get code block for a field in a given work area
+Function FIELDWBLOCK( <cFieldName>, <nWorkArea> ) --> bFieldWBlock | Return a set-get code block for a field in a given work area. ( Library:RTL )
 Function FILE( <cFileSpec> ) --> lExists   | Determine if files exist in the default directory or path
 Function FILEAPPEND( <cSourceFile>, <cTargetFile> ) --> nBytesAdded | Concatenates two files. 
 Function FILEATTR( [<cFileName>] ) --> nAttributes | Returns the attributes of a file. 
@@ -287,21 +287,21 @@ Function FILETIME( [<cFileName>], [<nAttributes>] ) --> cFileTime | Returns the 
 Function FKLABEL( <nFunctionKey> ) --> cKeyLabel | Returns a function key name. 
 Function FKMAX() --> nFKeyCount | Returns the number of available function keys. 
 Function FLINECOUNT( <cFileName> ) --> nLineCount | Counts the lines in an ASCII text file.
-Function FLOCK() --> lSuccess | Applies a file lock to an open, shared database. 
+Function FLOCK() --> lSuccess | Applies a file lock to an open, shared database.( Library:RTL ) 
 Function FLOOR( <nValue> ) --> nInteger | Rounds a decimal number to the next lower integer. 
-Function FOPEN( <cFileName>, [<nMode>]) --> nFileHandle  | Open a binary file
-Function FOUND() --> lSuccess  | Determine if the previous search operation succeeded
+Function FOPEN( <cFileName>, [<nMode>]) --> nFileHandle  | Open a binary file. ( Library:RTL )
+Function FOUND() --> lSuccess  | Determine if the previous search operation succeeded. ( Library:RTL )
 Function FPARSE( <cFileName>, <cDelimiter> ) --> aTextArray | Parses a delimited text file and loads it into an array. 
 Function FPARSEEX( <cFileName>, [<cDelimiter>] ) --> aTextArray | Parses a delimited text file and loads it into an array (optimized). 
 Function FPARSELINE( <cTextLine>, [<cDelimiter>]  ) --> aTextFields | Parses one line of a delimited text and loads it into an array. 
-Function FREAD(<nFileHandle>, @<cBuffer>, <nBytes>, [<nOffset>]     ) --> nBytesRead | Read characters from a binary file into a buffer variable
-Function FREADSTR( <nFileHandle>, <nBytes> ) --> cString | Read characters from a binary file
-Function FRENAME( <cOldFile>, <cNewFile> ) --> nSuccess | Change the name of a file
-Function FSEEK( <nFileHandle>, <nBytes>, [<nOrigin>] ) --> nPosition | Set a binary file pointer to a new position
+Function FREAD(<nFileHandle>, @<cBuffer>, <nBytes>, [<nOffset>]     ) --> nBytesRead | Read characters from a binary file into a buffer variable. ( Library:RTL )
+Function FREADSTR( <nFileHandle>, <nBytes> ) --> cString | Read characters from a binary file. ( Library:RTL )
+Function FRENAME( <cOldFile>, <cNewFile> ) --> nSuccess | Change the name of a file. ( Library:RTL )
+Function FSEEK( <nFileHandle>, <nBytes>, [<nOrigin>] ) --> nPosition | Set a binary file pointer to a new position. ( Library:RTL )
 Function FTOC( <nFloat> ) --> cFloat    | Converts a floating point number to an 8 byte binary string.
 Function FV( <nInvestment>, <nInterestRate>, <nPeriods> ) --> nFutureValue | Calculates the future value of constant, periodic investments.
 Function FWORDCOUNT( <cFileName> ) --> nWordCount | Counts the words in a text file. 
-Function FWRITE(<nFileHandle>, <cBuffer>, [<nBytes>], [<nOffset>] ) --> nBytesWritten | Write to an open binary file
+Function FWRITE(<nFileHandle>, <cBuffer>, [<nBytes>], [<nOffset>] ) --> nBytesWritten | Write to an open binary file. ( Library:RTL )
 
 Function GBMPDISP()     | Display a bitmap (.BMP) file on screen
 Function GBMPLOAD()     | Load a bitmap (.bmp) or icon (.ico) file into memory
