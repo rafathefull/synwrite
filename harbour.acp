@@ -243,12 +243,23 @@ Function DTOC( <dDate>)  --> cDateString  | Convert a date value to a character 
 Function DTOR( <nDegrees> ) --> nRadians | Converts an angle from degrees to radians. 
 Function DTOS( <dDate>)  --> cYYYYMMDD | Convert a date value to a string formatted as yyyymmdd
 
-Function EMPTY()        | Determine if the result of an expression is empty
-Function EOF()          | Determine when end of file is encountered
-Function ERRORBLOCK()   | Post a code block to execute when a runtime error occurs
-Function ERRORLEVEL()   | Set the CA-Clipper return code
-Function EVAL()         | Evaluate a code block
-Function EXP()          | Calculate e**x
+Function ELAPTIME( <cStartTime>, <cEndTime> ) --> cElapsedTime | Calculates the time elapsed between a start and an end time. 
+Function EMPTY( <expression> ) -->  lIsEmpty | Determine if the result of an expression is empty
+Function ENHANCED() | Selects the enhanced color of SetColor().  
+Function EOF()--> lIsEndOfFile | Determine when end of file is encountered
+Function EOM( [<dDate>] ) --> dLastDayOfMonth | EoM( [<dDate>] ) --> dLastDayOfMonth
+Function EOQ( [<dDate>] ) --> dEndOfQuarter | Returns the date of the last day in a quarter. 
+Function EOY( [<dDate>] ) --> dLastDayOfYear | Returns the date for the last day of a year. 
+Function ERRORBLOCK([<bErrorBlock>] ) --> bLastErrorBlock   | Post a code block to execute when a runtime error occurs
+Function ERRORLEVEL( [<cSubSystem>  ], [<nGenCode>], [<nSubCode>], [<cOperation>], [<cDescription>], [ <aArgs> ], [<cModuleName> ], [<cProcName>], [<nProcLine>] ) | Set the CA-Clipper return code
+Function ERRORSYS( <bDefaultErrorBlock> ) | Installs the default error code block. 
+Function EVAL( <bBlock> [, <xValue,...> ] )--> xReturn | Evaluate a code block
+Function EXENAME() --> cExeFileName | Returns the EXE file name of an xHarbour application. 
+Function EXP(<nExponent> ) --> nAntiLogarithm | Calculate e**x
+Function EXPAND( <cString>, [<nCount>], [<xChar>] ) --> cResult | Inserts characters between all characters in a string. 
+Function EXPONENT( <nFloat> ) --> nExponent | Calculates the exponent of a floating point number. 
+
+Function FACT( <nInteger> ) --> nFactorial | Calculates the factorial of a number. 
 Function FCLOSE()       | Close an open binary file and write DOS buffers to disk
 Function FCOUNT()       | Return the number of fields in the current .dbf file
 Function FCREATE()      | Create and/or truncate a binary file to zero-length
@@ -271,6 +282,7 @@ Function FREADSTR()     | Read characters from a binary file
 Function FRENAME()      | Change the name of a file
 Function FSEEK()        | Set a binary file pointer to a new position
 Function FWRITE()       | Write to an open binary file
+
 Function GBMPDISP()     | Display a bitmap (.BMP) file on screen
 Function GBMPLOAD()     | Load a bitmap (.bmp) or icon (.ico) file into memory
 Function GELLIPSE()     | Draw an ellipse or circle
