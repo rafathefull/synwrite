@@ -306,12 +306,32 @@ Function FWRITE(<nFileHandle>, <cBuffer>, [<nBytes>], [<nOffset>] ) --> nBytesWr
 Function GBMPDISP()     | Display a bitmap (.BMP) file on screen
 Function GBMPLOAD()     | Load a bitmap (.bmp) or icon (.ico) file into memory
 Function GELLIPSE()     | Draw an ellipse or circle
-Function GETACTIVE()    | Return the currently active Get object
-Function GETAPPLYKEY()  | Apply a key to a Get object from within a  reader
-Function GETDOSETKEY()  | Process SET KEY during GET editing
-Function GETENV()       | Retrieve the contents of a DOS environment variable
-Function GETPOSTVALID() | Postvalidate the current Get object
-Function GETPREVALID()  | Prevalidate a Get object
+Function GETACTIVE( [<oGet>] ) --> oGet OR NIL | Return the currently active Get object
+Function GETAPPLYKEY( <oGet>, <nKey> )  | Apply a key to a Get object from within a  reader
+Function GETCLEARA() --> nClearAttribute | Returns the default color attribute for clearing the screen. 
+Function GETCLEARB() --> nClearCharacter | Returns the default character for clearing the screen. 
+Function GETCLRBACK( <cColor> ) --> cBackgroundColor | Returns the background color of a color value. 
+Function GETCLRFORE( <cColor> ) --> cForegroundColor | Returns the foreground color of a color value. 
+Function GETCLRPAIR( <cColorString>, <nPos> ) --> cColorValue | Extracts a color value from a color string. 
+Function GETCURRENTTHREAD() --> pThreadHandle | Retrieves the handle of the current thread. 
+Function GETDEFAULTPRINTER() --> cPrinterName | Retrieves the name of a computer's default printer. 
+Function GETDOSETKEY( <bBlock>, <oGet> )  | Process SET KEY during GET editing
+Function GETENV( <cEnvVar> ) --> cString | Retrieve the contents of a DOS environment variable
+Function GETFLDCOL( [<nGetPos>] ) --> nScreenColumn | Returns the screen column position of a Get field. 
+Function GETFLDROW( [<nGetPos>] ) --> nScreenRow | Returns the screen row position of a Get field. 
+Function GETFLDVAR( [<nGetPos>] ) --> cGetVarName | Returns the name of a Get variable. 
+Function GETLASTERROR() --> nErrorCode | Retrieves the error code of the last dynamically called DLL function. 
+Function GETNEW( [<nRow>], [<nCol>], <bVarBlock>, [<cVarName>], [<cPicture>], [<cColorSpec>]  ) --> oGet | Creates a new Get object. 
+Function GETPAIRLEN( <cColorString>, <nPos> ) --> nLength | Returns the length of a color value within a color string. 
+Function GETPAIRPOS( <cColorString>, <nPos> ) --> nAbsPos | Returns the absolute position of a color value in a color string. 
+Function GETPOSTVALIDATE(<oGet> ) --> lDataIsValid) | Postvalidate the current Get object
+Function GETPREC() --> nDecimalPlaces | Retrieves computing precision for trigonometric functions.
+Function GETPREVALIDATE(  <oGet> ) --> lCanEdit | Prevalidate a Get object
+Function GETPRINTERS( [<lPortInfo>], [<lLocalPrinters>] ) --> aPrinterInfo | Retrieves information about available printers. 
+Function GETREGISTRY( <nHKEY>, <cRegPath>, <cRegKey> ) --> xRegValue | Retrieves the value of a registry entry 
+Function GETSYSTEMTHREADID( [<pThreadHandle>] ) --> nSystemTID | Retrieves the numeric system Thread ID of a thread.
+Function GETTHREADID( [<pThreadHandle>] ) --> nApplicationTID | Retrieves the numeric application Thread ID of a thread. 
+Function GETVOLINFO( <cDrive> ) --> lSuccess | Retrieves the volume label of a disk. 
 Function GETREADER()    | Execute standard READ behavior for a Get object
 Function GFNTERASE()    | Erase a font from memory
 Function GFNTLOAD()     | Load a font file into memory
@@ -327,8 +347,10 @@ Function GSETCLIP()     | Define the allowed display area
 Function GSETEXCL()     | Define a screen region to be excluded from display
 Function GSETPAL()      | Change components of a color
 Function GWRITEAT()     | Draw graphic text without background
+
 Function HARDCR()       | Replace all soft carriage returns with hard carriage returns
 Function HEADER()       | Return the current database file header length
+
 Function I2BIN()        | Convert a CA-Clipper numeric to a 16-bit binary integer
 Function IF()           | Return the result of an expression based on a condition
 Function IIF()          | Return the result of an expression based on a condition
@@ -343,6 +365,7 @@ Function ISDIGIT()      | Determine if the leftmost character in a string is a d
 Function ISLOWER()      | Determine if the leftmost character is a lowercase letter
 Function ISPRINTER()    | Determine whether LPT1 is ready
 Function ISUPPER()      | Determine if the leftmost character in a string is uppercase
+
 Function L2BIN()        | Convert a CA-Clipper numeric value to a 32-bit binary integer
 Function LASTKEY()      | Return INKEY() value of last key extracted from the keyboard
 Function LASTREC()      | Determine the number of records in the current .dbf file
@@ -352,6 +375,7 @@ Function LOG()          | Calculate the natural logarithm of a numeric value
 Function LOWER()        | Convert uppercase characters to lowercase
 Function LTRIM()        | Remove leading spaces from a character string
 Function LUPDATE()      | Return the last modification date of a database (.dbf) file
+
 Function MAX()          | Return the larger of two numeric or date values
 Function MAXCOL()       | Determine the maximum visible screen column
 Function MAXROW()       | Determine the maximum visible screen row
